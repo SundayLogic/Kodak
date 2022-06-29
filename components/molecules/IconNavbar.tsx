@@ -16,42 +16,44 @@ type Icons =
   | "TRENDING";
 interface IconText {
   title: string;
-  iconName?: Icons;
+  iconName: Icons;
 }
 const IconNavbar = ({ title, iconName }: IconText) => {
-  const iconCreator = (name: string) => {
+  const iconCreator = (name: Icons) => {
     let finalCode;
     switch (name) {
       case "HOME":
-        finalCode = <HomeIcon className="w-7 h-7 opacity-60 group:hover:opacity-100" />;
+        finalCode = <HomeIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "SEARCH":
-        finalCode = <SearchIcon className="w-7 h-7" />;
+        finalCode = <SearchIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "MOVIES":
-        finalCode = <FilmIcon className="w-7 h-7" />;
+        finalCode = <FilmIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "SERIES":
-        finalCode = <VideoCameraIcon className="w-7 h-7" />;
+        finalCode = <VideoCameraIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "WATCHLIST":
-        finalCode = <CollectionIcon className="w-7 h-7" />;
+        finalCode = <CollectionIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "ORIGINALS":
-        finalCode = <StarIcon className="w-7 h-7" />;
+        finalCode = <StarIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       case "TRENDING":
-        finalCode = <SearchIcon className="w-7 h-7" />;
+        finalCode = <SearchIcon className="w-7 h-7 md:w-8 md:h-8 lg:w-8.5 lg:h-8.5" />;
         break;
       default:
-        finalCode = <h1>Not found</h1>;
+        finalCode = <h1>not found</h1>;
     }
     return finalCode;
   };
   return (
-    <div className="flex flex-col items-center space-y-1.5 cursor-pointer p-2 group">
-      {iconCreator(iconName)}
-      <h1 className="text-xl uppercase opacity-60 group:hover:opacity-100">
+    <div className="flex flex-col items-center space-y-2 cursor-pointer py-3 group w-[100px]">
+      <div className="opacity-90 group-hover:opacity-100 ease-out duration-150 transition-all">
+        {iconCreator(iconName)}
+      </div>
+      <h1 className="text-xl uppercase z-1 opacity-90 group-hover:opacity-100 group-hover:tracking-wider transition-all">
         {title}
       </h1>
     </div>

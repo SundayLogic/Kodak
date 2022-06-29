@@ -5,7 +5,7 @@ interface Props{
 }
 const ContentSlider = ({type}:Props) =>{
     return(
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start h-[300px]">
             <div className="text-xl">
                 <h1>{type}</h1>
             </div>
