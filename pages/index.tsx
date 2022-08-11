@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Kodak</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
 
       <main>

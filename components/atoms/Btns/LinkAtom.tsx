@@ -7,7 +7,7 @@ interface LinkAtomProps {
 const LinkAtom = ({reference, content}:LinkAtomProps) => {
     const router = useRouter();
     return(
-        <button onClick={() => router.push(reference)}>
+        <button onClick={() => router.push(reference)} className="flex items-center justify-center">
             {content}
         </button>
     );
