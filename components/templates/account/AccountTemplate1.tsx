@@ -1,7 +1,9 @@
+import Header from "../../organisms/Header";
+
 const AccountTemplate1= () => {
     return(
         <>
-            <h1>Account Template 1</h1>
+            <Header />
         </> 
         )
 };

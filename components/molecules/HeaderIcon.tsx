@@ -1,10 +1,8 @@
 import {
   HomeIcon,
-  SearchIcon,
   FilmIcon,
   CollectionIcon,
   VideoCameraIcon,
-  StarIcon,
   TrendingUpIcon,
 } from "@heroicons/react/solid";
 type Icons =
@@ -38,7 +36,7 @@ const HeaderIcon = ({ name, iconName}: HeaderIconProps) => {
         finalCode = <TrendingUpIcon className="headerIcon" />;
         break;
       default:
-        finalCode = <h1>not found</h1>;
+        finalCode = <h1>icon not found</h1>;
     }
     return finalCode;
   };
@@ -47,7 +45,7 @@ const HeaderIcon = ({ name, iconName}: HeaderIconProps) => {
       <div className="opacity-90 group-hover:opacity-100 ease-out duration-150 transition-all">
         {iconCreator(iconName)}
       </div>
-      <h1 className="text-sm uppercase md:text-base z-1 opacity-90 group-hover:opacity-100 sm:group-hover:tracking-wider transition-all md:group-hover:font-bold duration-200 ease-in-out">
+      <h1 className="text-subtitle uppercase z-1 opacity-90 group-hover:opacity-100 sm:group-hover:tracking-wider transition-all md:group-hover:font-bold duration-200 ease-in-out">
         {name}
       </h1>
     </div>

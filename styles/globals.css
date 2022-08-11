@@ -5,14 +5,17 @@
 
 @layer base{
     body{ 
-        @apply bg-kodakPurple-10 text-kodakPurple-0.5 h-screen w-screen font-roboto
+        @apply bg-kodakPurple-10 text-kodakPurple-0.5 h-screen w-screen font-roboto 
     }
 }
 @layer components{
     .fontShape{
-        @apply text-shape font-roboto
+        @apply text-shape font-roboto;
     }
     .headerIcon{
-        @apply w-5 h-5 md:w-6 md:h-6
+        @apply w-5 h-5 md:w-6 md:h-6;
+    }
+    .descriptionIcon{
+        @apply items-center w-6 h-6;
     }
 }
