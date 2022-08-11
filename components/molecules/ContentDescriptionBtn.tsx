@@ -31,8 +31,8 @@ const ContentDescriptionBtn = ({
     return finalCode;
   };
   return (
-    <div className="px-4 py-2 bg-[#4735f2]/80 rounded-md text-lg cursor-pointer items-center flex space-x-2  opacity-95 hover:opacity-100 transition-all duration-200 ease-out hover:bg-[#f5f0ff]/100 hover:text-[#0d0033] hover:bg-opacity-20 justify-center tracking-wider;">
-      <div>{iconCreator()}</div>
+    <div className="flex items-center justify-center max-w-[200px] space-x-2 text-subtitle bg-kodakPurple-6/90 px-4 py-2 rounded-md hover:bg-kodakPurple-1/90 hover:text-kodakPurple-10 transition-all duration-200 ease-out tracking-wide">
+      {iconCreator()}
       <TextAtom text={text} type="DESCRIPTION_LINK"/>
     </div>
   );

@@ -1,19 +1,9 @@
 import LinkAtom from "../atoms/Btns/LinkAtom";
 import ImageAtom from "../atoms/images/ImageAtom";
 import HeaderIcon from "../molecules/HeaderIcon";
+import links from "../../utils/links";
 type Icons = "HOME" | "MOVIES" | "SERIES" | "WATCHLIST" | "TRENDING";
 const Header = () => {
-  const links = {
-    home: "/",
-    movies: "/movie/movies",
-    series: "/tv/series",
-    trending: "/trending",
-    account: "/account",
-  };
-  const sources = {
-    logo: "/images/BendedLogo2.png",
-    accountImage: "/images/smilingFace.png",
-  };
   const iconTextGenerator = (name: string, iconName: Icons) => (
     <HeaderIcon name={name} iconName={iconName} />
   );
@@ -29,38 +19,38 @@ const Header = () => {
         <div className="flex items-center justify-center sm:space-x-6 w-fit ">
           <div className="hidden md:flex p-1 min-w-[80px] opacity-90  hover:saturate-150 transition-all duration-200 ease-in-out">
             <LinkAtom
-              reference={links.home}
-              content={imageCreator(sources.logo, "logoImage", 100, 50)}
+              reference={links.urls.home}
+              content={imageCreator(links.sources.logo, "logoImage", 100, 50)}
             />
           </div>
           <div className="flex items-center justify-between space-x-3 md:space-x-5 xl:space-x-6">
             <LinkAtom
-              reference={links.home}
+              reference={links.urls.home}
               content={iconTextGenerator("Home", "HOME")}
             />
             <LinkAtom
-              reference={links.trending}
+              reference={links.urls.trending}
               content={iconTextGenerator("Trending", "TRENDING")}
             />
             <LinkAtom
-              reference={links.movies}
+              reference={links.urls.movies}
               content={iconTextGenerator("Movies", "MOVIES")}
             />
             <LinkAtom
-              reference={links.series}
+              reference={links.urls.series}
               content={iconTextGenerator("Series", "SERIES")}
             />
             <LinkAtom
-              reference={links.home}
+              reference={links.urls.home}
               content={iconTextGenerator("Watchlist", "WATCHLIST")}
             />
           </div>
         </div>
         <div className="items-center hidden sm:flex ml-5 md:ml-20 md:flex">
           <LinkAtom
-            reference={links.account}
+            reference={links.urls.account}
             content={imageCreator(
-              sources.accountImage,
+              links.sources.accountImage,
               "account-image",
               45,
               45

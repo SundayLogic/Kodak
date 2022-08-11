@@ -8,13 +8,13 @@ const TextAtom = ({text,type}:TextAtomProps) => {
     let finalCode;
     switch (type) {
       case "TITLE":
-        finalCode = <h1 className="text-h1 opacity-90">{text}</h1>;
+        finalCode = <h1 className="md:text-h1 opacity-80 text-shadow-lg">{text}</h1>;
         break;
       case "OVERVIEW":
-        finalCode = <p className="text-lg">{text}</p>;
+        finalCode = <p className="text-lg text-shadow-sm">{text}</p>;
         break;
       case "DESCRIPTION_LINK":
-        finalCode = <p className="text-subtitle">{text}</p>;
+        finalCode = <p className="text-subtitle tracking-wider">{text}</p>;
         break;
       default:
         finalCode = <h1>text not found</h1>;
