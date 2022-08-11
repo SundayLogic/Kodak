@@ -1,11 +1,9 @@
-import TextAtom from "../../atoms/Text/TextAtom";
+import Header from "../../organisms/Header";
 
 const HomeTemplate1= () => {
     return(
         <>
-            <h1 className="text-h1 font-black">
-                <TextAtom text={"This is text"}/>
-            </h1>
+            <Header />
         </> 
         )
 };
