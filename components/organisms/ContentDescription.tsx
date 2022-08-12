@@ -9,8 +9,8 @@ interface ContentDescriptionProps {
 const ContentDescription = ({ title, overview }: ContentDescriptionProps) => {
   return (
     <div className="flex justify-start">
-      <div className="flex flex-col space-y-6  px-9 lg:px-20 h-[40vh] md:h-[50vh] lg:h-[60vh] justify-center   items-center md:items-start max-w-[60vw] bg-kodakPurple-4">
-        <div className="">
+      <div className="flex flex-col w-[100vw] space-y-6  px-9 lg:px-20 h-[40vh] md:h-[50vh] lg:h-[60vh] justify-center   rounded-lg items-center md:items-start bg-kodakPurple-9/20">
+        <div className="flex flex-col mt-20 space-y-2 md:space-y-4">
           <TextAtom text={title} type={"TITLE"} />
           <TextAtom text={overview} type={"OVERVIEW"} />
         </div>

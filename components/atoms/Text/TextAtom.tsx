@@ -8,10 +8,10 @@ const TextAtom = ({text,type}:TextAtomProps) => {
     let finalCode;
     switch (type) {
       case "TITLE":
-        finalCode = <h1 className="md:text-h1 opacity-80 text-shadow-lg">{text}</h1>;
+        finalCode = <h1 className="text-3xl text-center font-bold tracking-wider md:text-5xl lg:text-h1 md:text-start lg:w-[50vw] text-shadow-lg lg:opacity-90">{text}</h1>;
         break;
       case "OVERVIEW":
-        finalCode = <p className="text-lg text-shadow-sm">{text}</p>;
+        finalCode = <p className="w-[80vw] md:w-[50vw] lg:w-[50vw] xl:w-[35vw] lg:text-paragraph text-shadow-sm">{text}</p>;
         break;
       case "DESCRIPTION_LINK":
         finalCode = <p className="text-subtitle tracking-wider">{text}</p>;
