@@ -1,8 +1,8 @@
 import Image from "next/image";
 interface ImageAtomProps {
   src: string;
-  w:number;
-  h:number;
+  w?:number;
+  h?:number;
   alt:string
 }
 const ImageAtom = ({ src, w, alt, h}: ImageAtomProps) => {
