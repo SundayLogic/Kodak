@@ -16,6 +16,9 @@ const TextAtom = ({text,type}:TextAtomProps) => {
       case "DESCRIPTION_LINK":
         finalCode = <p className="text-subtitle tracking-wider">{text}</p>;
         break;
+      case "SECTION":
+        finalCode = <h2 className="pl-5 text-xl lg:text-2xl xl:text-3xl">{text}</h2>;
+        break;
       default:
         finalCode = <h1>text not found</h1>;
     }
