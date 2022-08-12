@@ -19,7 +19,6 @@ const HomeTemplate1 = ({ results }: any) => {
     return result;
   };
   changeContentNumber(3000);
-  console.log(contentNumber);
   return (
     <>
       <Header />
