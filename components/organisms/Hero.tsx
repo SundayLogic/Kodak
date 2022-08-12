@@ -2,14 +2,16 @@ import Backdrop from "../atoms/images/Backdrop";
 import ContentDescription from "./ContentDescription";
 
 interface HeroProps{
-  text?: string;
+  backdrop: string;
+  title: string;
+  overview: string;
+  page?: string;
 }
-const Hero = () => {
-  const title = "Movie Title";
-  const paragraph = "Lorem ipsum dolor sit amet consectetur adipisicing elit. A totam ducimus deleniti consectetur modi nemo nobis? Tempora suscipit ad aspernatur illo nihil. Aliquid minus similique tempore rem culpa, nesciunt suscipit magnam temporibus minima voluptate placeat eveniet quis. Tempora, minima deserunt!"
+const Hero = ({backdrop, title, overview, page}:HeroProps) => {
   return (
     <>
-      <ContentDescription title={title} overview={paragraph}/>
+      <Backdrop image={backdrop} quality={100} height={"h-[60vh]"}/>
+      <ContentDescription title={title} overview={overview}/>
     </>
   );
 };

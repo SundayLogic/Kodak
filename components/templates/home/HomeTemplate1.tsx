@@ -6,10 +6,12 @@ import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
 
 const HomeTemplate1 = ({ results }: any) => {
+  console.log(results.trending[0]);
+  
   return (
     <>
       <Header />
-      <Hero />
+      <Hero title={results.trending[0].title} backdrop={results.trending[0].backdrop_path} overview={results.trending[0].overview}/>
       <section></section>
     </>
   );
