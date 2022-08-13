@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import TextAtom from "../components/atoms/Text/TextAtom";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
@@ -25,6 +26,10 @@ const Home = ({
     seriesPopular: seriesPopular,
     seriesTopRated: seriesTopRated,
   };
+  const  [text, setText] = useState<string>("");
+  useEffect(() => {
+    setText(trending?.[0]?.backdrop_path);
+  },[])
   return (
     <div>
       <Head>
@@ -34,7 +39,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{trending?.[0]?.backdrop_path}</h1>
+        <h1>{text}</h1>
       </main>
     </div>
   );
