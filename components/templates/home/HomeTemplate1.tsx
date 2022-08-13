@@ -15,7 +15,6 @@ interface HomeProps {
 }
 
 const HomeTemplate1 = ({ props }: HomeProps) => {
-  let arr = undefined || [];
   return (
     <>
       <Header />

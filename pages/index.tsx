@@ -1,4 +1,5 @@
 import Head from "next/head";
+import TextAtom from "../components/atoms/Text/TextAtom";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
 import requests from "../utils/requests/requests";
@@ -33,6 +34,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
+        <h1>{homeProps.trending[0].backdrop_path}</h1>
       </main>
     </div>
   );
