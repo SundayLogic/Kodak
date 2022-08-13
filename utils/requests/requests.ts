@@ -1,6 +1,6 @@
 import links from "../links";
 
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+const API_KEY = "4d071ab1be7403c2486ed2ab0fa244c2";
 const BASE_URL = links.urls.dbBase;
 const requests = {
     fetchTrending:`${BASE_URL}/trending/all/day?api_key=${API_KEY}&language=en-US&page=1`,
