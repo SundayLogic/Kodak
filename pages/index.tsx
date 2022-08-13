@@ -34,7 +34,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{homeProps.trending[0].backdrop_path}</h1>
+        <h1>{homeProps.trending?.[0].backdrop_path}</h1>
       </main>
     </div>
   );
