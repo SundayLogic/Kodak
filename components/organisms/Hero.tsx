@@ -10,7 +10,6 @@ interface HeroProps{
 const Hero = ({backdrop, title, overview, page}:HeroProps) => {
   return (
     <>
-      <Backdrop image={backdrop} quality={100} height={"h-[60vh]"}/>
       <ContentDescription title={title} overview={overview}/>
     </>
   );
