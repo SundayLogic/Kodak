@@ -11,7 +11,7 @@ const Home = (props:HomeProps) => {
       </Head>
 
       <main>
-        <HomePage results={props} />
+        <HomePage props={props} />
       </main>
     </div>
   );
