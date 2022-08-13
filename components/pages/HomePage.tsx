@@ -1,10 +1,10 @@
 import { HomeProps } from "../../typings";
 import HomeTemplate1 from "../templates/home/HomeTemplate1";
 
-const HomePage = ({results}:any) => {
+const HomePage = (props:any) => {
     return(
         <>
-            <HomeTemplate1 results={results}/>
+            <HomeTemplate1 results={props.results}/>
         </> 
         )
 };
