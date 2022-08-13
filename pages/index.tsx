@@ -26,10 +26,6 @@ const Home = ({
     seriesPopular: seriesPopular,
     seriesTopRated: seriesTopRated,
   };
-  const  [text, setText] = useState<string>("");
-  useEffect(() => {
-    setText(trending?.[0]?.backdrop_path);
-  },[])
   return (
     <div>
       <Head>
@@ -39,7 +35,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{text}</h1>
+        <h1>{trending?.[0]?.id}</h1>
       </main>
     </div>
   );
@@ -63,11 +59,11 @@ export const getServerSideProps = async () => {
   ]);
   return {
     props: {
-      trending: trending.results || null,
-      moviesPopular: moviesPopular.results || null ,
-      moviesTopRated: moviesTopRated.results || null ,
-      seriesPopular: seriesPopular.results || null,
-      seriesTopRated: seriesTopRated.results || null,
+      trending: trending.results,
+      moviesPopular: moviesPopular.results,
+      moviesTopRated: moviesTopRated.results,
+      seriesPopular: seriesPopular.results,
+      seriesTopRated: seriesTopRated.results,
     },
   };
 };
