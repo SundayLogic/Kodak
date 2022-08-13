@@ -6,8 +6,6 @@ import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
 
 const HomeTemplate1 = ({ results }: any) => {
-  console.log(results.trending[0]);
-  
   return (
     <>
       <Header />
