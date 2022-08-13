@@ -25,7 +25,6 @@ const Home = ({
     seriesPopular: seriesPopular,
     seriesTopRated: seriesTopRated,
   };
-  console.log(trending[0]?.backdrop_path);
   return (
     <div>
       <Head>
@@ -35,7 +34,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{trending[0]?.backdrop_path}</h1>
+        <h1>{trending?.[0]?.backdrop_path}</h1>
       </main>
     </div>
   );
