@@ -17,7 +17,7 @@ const Home = ({
       </Head>
 
       <main>
-        <h1>{trending[0].title}</h1>
+        <h1>{trending[1].title}</h1>
       </main>
     </div>
   );
