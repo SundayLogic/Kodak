@@ -26,9 +26,8 @@ const Home = ({
     seriesTopRated: seriesTopRated,
   };
   const testFunc = () =>
-    homeProps.trending[0].backdrop_path
-      ? homeProps.trending[0].backdrop_path
-      : undefined;
+    homeProps.trending[0]?.backdrop_path
+    
   return (
     <div>
       <Head>
