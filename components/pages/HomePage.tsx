@@ -4,7 +4,7 @@ import HomeTemplate1 from "../templates/home/HomeTemplate1";
 const HomePage = ({props}:any) => {
     return(
         <>
-            <HomeTemplate1 results={props}/>
+            <h1>{props.trending[0].title}</h1>
         </> 
         )
 };
