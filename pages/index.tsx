@@ -42,7 +42,7 @@ const Home = ({
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const [
     trending,
     moviesPopular,
@@ -58,11 +58,11 @@ export const getStaticProps = async () => {
   ]);
   return {
     props: {
-      trending: trending.results,
-      moviesPopular: moviesPopular.results,
-      moviesTopRated: moviesTopRated.results,
-      seriesPopular: seriesPopular.results,
-      seriesTopRated: seriesTopRated.results,
+      trending: trending.results || null,
+      moviesPopular: moviesPopular.results || null ,
+      moviesTopRated: moviesTopRated.results || null ,
+      seriesPopular: seriesPopular.results || null,
+      seriesTopRated: seriesTopRated.results || null,
     },
   };
 };
