@@ -8,6 +8,7 @@ import Hero from "../../organisms/Hero";
 const HomeTemplate1 = ({ results }: any) => {
   return (
     <>
+      <h1>{results.trending[0].title}</h1>
       <Header />
     </>
   );
