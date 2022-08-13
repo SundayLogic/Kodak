@@ -10,7 +10,6 @@ const HomeTemplate1 = ({ results }: any) => {
     <>
       <Header />
       <Hero title={results.trending[0].title} backdrop={results.trending[0].backdrop_path} overview={results.trending[0].overview}/>
-      <section></section>
     </>
   );
 };

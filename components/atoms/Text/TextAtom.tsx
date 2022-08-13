@@ -1,7 +1,7 @@
 type TextTypes = "TITLE" | "OVERVIEW" | "LINK" | "PAGE" | "SECTION" | "DESCRIPTION_LINK";
 interface TextAtomProps {
-  text: string;
-  type: TextTypes;
+  text: any;
+  type: any;
 }
 const TextAtom = ({text,type}:TextAtomProps) => {
   const textGenerator = () => {
