@@ -1,9 +1,9 @@
 import Image from "next/image";
 import links from "../../../utils/links";
 interface BackdropProps {
-  image: string;
-  quality: number;
-  height?: string;
+  image: any;
+  quality: any;
+  height?: any;
 }
 const Backdrop = ({ image, quality, height}: BackdropProps) => {
   const imgUrl = `${links.urls.dbImage}${image}`
