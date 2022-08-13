@@ -1,14 +1,29 @@
 import Head from "next/head";
 import HomePage from "../components/pages/HomePage";
-import { HomeProps } from "../typings";
+import { Movie, Serie } from "../typings";
 import requests from "../utils/requests/requests";
+
+interface HomeProps {
+  trending: (Serie | Movie)[];
+  moviesPopular: Movie[];
+  moviesTopRated: Movie[];
+  seriesPopular: Serie[];
+  seriesTopRated: Serie[];
+}
 const Home = ({
-    trending,
-    moviesPopular,
-    moviesTopRated,
-    seriesPopular,
-    seriesTopRated,
-}:any) => {
+  trending,
+  moviesPopular,
+  moviesTopRated,
+  seriesPopular,
+  seriesTopRated,
+}: HomeProps) => {
+  const homeProps = {
+    trending: trending,
+    moviesPopular: moviesPopular,
+    moviesTopRated: moviesTopRated,
+    seriesPopular: seriesPopular,
+    seriesTopRated: seriesTopRated,
+  };
   return (
     <div>
       <Head>
@@ -17,7 +32,7 @@ const Home = ({
       </Head>
 
       <main>
-        <h1>{trending[1].title}</h1>
+        <HomePage props={homeProps} />
       </main>
     </div>
   );
