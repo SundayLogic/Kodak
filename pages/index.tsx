@@ -2,7 +2,7 @@ import Head from "next/head";
 import HomePage from "../components/pages/HomePage";
 import { HomeProps } from "../typings";
 import requests from "../utils/requests/requests";
-const Home = (props:HomeProps) => {
+const Home = (props:any) => {
   return (
     <div>
       <Head>
@@ -11,7 +11,7 @@ const Home = (props:HomeProps) => {
       </Head>
 
       <main>
-        <h1>{props.moviesPopular[0].title}</h1>
+        <h1>Hello</h1>
       </main>
     </div>
   );
