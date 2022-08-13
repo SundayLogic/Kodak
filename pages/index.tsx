@@ -11,7 +11,7 @@ const Home = (props:HomeProps) => {
       </Head>
 
       <main>
-        <HomePage props={props} />
+        <h1>{props.moviesPopular[0].title}</h1>
       </main>
     </div>
   );
