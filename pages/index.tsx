@@ -25,6 +25,11 @@ const Home = ({
     seriesPopular: seriesPopular,
     seriesTopRated: seriesTopRated,
   };
+  const check = () =>
+    homeProps.trending[0].backdrop_path != undefined
+      ? homeProps.trending[0].backdrop_path
+      : undefined;
+  console.log(check())
   return (
     <div>
       <Head>
@@ -34,7 +39,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{homeProps.trending?.[0].backdrop_path}</h1>
+        <h1>{check()}</h1>
       </main>
     </div>
   );
