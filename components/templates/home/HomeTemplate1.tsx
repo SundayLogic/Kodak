@@ -15,10 +15,11 @@ interface HomeProps {
 }
 
 const HomeTemplate1 = ({ props }: HomeProps) => {
+  let arr = undefined || [];
   return (
     <>
       <Header />
-      <Hero backdrop={props.moviesPopular[0].backdrop_path} title={props.moviesPopular[0].title} overview={props.moviesPopular[0].overview}/>
+      <Hero backdrop={props.moviesPopular?.[0].backdrop_path} title={props.moviesPopular?.[0].title} overview={props.moviesPopular?.[0].overview}/>
     </>
   );
 };
