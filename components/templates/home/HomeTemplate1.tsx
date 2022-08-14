@@ -29,7 +29,7 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
         page={"Movies"}
       />
       {Component()}
-      <ContentSlider sliderName="Trending Movies" contentResults={props.moviesPopular?.[0]} sliderType={"TRENDING"}/>
+      <ContentSlider sliderName="Trending Movies" contentResults={props.moviesPopular?.[0]} />
     </>
   );
 };
