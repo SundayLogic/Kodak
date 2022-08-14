@@ -22,7 +22,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
         overview={props.moviesPopular?.[0].overview}
         page={"Movies"}
       />
-      <ContentSlider sliderName="Trending Movies" contentResults={props.moviesPopular?.[0]} />
+      <ContentSlider sliderName="Trending" contentResults={props.moviesPopular} />
+      <ContentSlider sliderName="Top Rated Movies" contentResults={props.moviesTopRated} />
+      <ContentSlider sliderName="Top Rated Series" contentResults={props.seriesTopRated} />
     </>
   );
 };

@@ -17,7 +17,7 @@ const Header = () => {
     <header className="bg-gradient-to-b from-black w-[100vw] pt-2  fixed  z-10">
       <div className="flex items-center justify-center opacity-95 space-x-6 lg:space-x-8">
         <div className="flex items-center justify-center sm:space-x-6 w-fit ">
-          <div className="hidden md:flex p-1 min-w-[80px] opacity-90  hover:saturate-150 transition-all duration-200 ease-in-out">
+          <div className="hidden md:flex p-1 min-w-[80px] opacity-90   headerImg">
             <LinkAtom
               reference={links.urls.home}
               content={imageCreator(links.sources.logo, "logoImage", 100, 50)}
@@ -46,7 +46,7 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="items-center hidden sm:flex ml-5 md:ml-20 md:flex">
+        <div className="items-center hidden sm:flex ml-5 md:ml-20 md:flex headerImg">
           <LinkAtom
             reference={links.urls.account}
             content={imageCreator(
