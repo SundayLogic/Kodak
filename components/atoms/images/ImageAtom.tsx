@@ -1,16 +1,16 @@
 import Image from "next/image";
 interface ImageAtomProps {
   src: string;
-  w?:number;
-  h?:number;
+  w?:number | string;
+  h?:number | string;
   alt:string
 }
 const ImageAtom = ({ src, w, alt, h}: ImageAtomProps) => {
   return (
     <Image 
         src={src}
-        width={w}
         alt={alt}
+        width={w}
         height={h}
     />
   );

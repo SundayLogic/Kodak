@@ -8,7 +8,7 @@ interface BackdropProps {
 const Backdrop = ({ image, quality, height}: BackdropProps) => {
   const imgUrl = `${links.urls.dbImage}${image}`
   return (
-    <div className={`absolute top-0 left-0 w-screen shadow-2xl -z-10 ${height}`}>
+    <div className={`absolute top-0 left-0 w-screen shadow-2xl -z-20 ${height}`}>
       <Image 
           src={imgUrl}
           layout="fill"
