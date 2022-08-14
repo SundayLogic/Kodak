@@ -6,7 +6,7 @@ interface movieProps {
   moviesTopRated: Movie[];
   moviesUpcoming: Movie[];
 }
-const movie = ({
+const movie= ({
   moviesPopular,
   moviesTopRated,
   moviesUpcoming,
