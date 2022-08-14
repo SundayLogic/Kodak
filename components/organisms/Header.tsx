@@ -12,7 +12,7 @@ const Header = () => {
     alt: string,
     width: number,
     height: number
-  ) => <ImageAtom src={src} w={width} h={height} alt={alt} />;
+  ) => <ImageAtom src={src} w={width} h={height} alt={alt} fill={false}/>;
   return (
     <header className="bg-gradient-to-b from-black w-[100vw] pt-2  fixed  z-10">
       <div className="flex items-center justify-center opacity-95 space-x-6 lg:space-x-8">
