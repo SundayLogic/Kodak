@@ -35,7 +35,6 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
-        <h1>{trending?.[0]?.id}</h1>
       </main>
     </div>
   );
