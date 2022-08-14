@@ -3,9 +3,9 @@ import ContentDescriptionBtn from "../molecules/ContentDescriptionBtn";
 import links from "../../utils/links";
 type Icons = "INFO" | "ADD" | "PLAY";
 interface ContentDescriptionBtnBoxProps {
-    play?: any;
-    info?: any;
-    add: any;
+    play?: boolean;
+    info?: boolean;
+    add: boolean;
 }
 const ContentDescriptionBtnBox = ({play,info,add}:ContentDescriptionBtnBoxProps) => {
   const buttonCreator = (text: string, iconName: Icons) => (

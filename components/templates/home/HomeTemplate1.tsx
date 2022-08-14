@@ -18,7 +18,13 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
   return (
     <>
       <Header />
-      <Hero backdrop={props.moviesPopular?.[0].backdrop_path} title={props.moviesPopular?.[0].title} overview={props.moviesPopular?.[0].overview}/>
+      <Hero
+        backdrop={props.moviesPopular?.[0].backdrop_path}
+        title={props.moviesPopular?.[0].title}
+        overview={props.moviesPopular?.[0].overview}
+        page={"Movies"}
+      />
+      <ContentSlider sliderName="Trending Movies" contentResults={props.moviesPopular?.[0]} sliderType={"TRENDING"}/>
     </>
   );
 };

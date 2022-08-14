@@ -1,8 +1,8 @@
 import React from "react";
 import {useRouter} from "next/router";
 interface LinkAtomProps {
-    reference: any;
-    content?: any;
+    reference: string;
+    content: JSX.Element;
 }
 const LinkAtom = ({reference, content}:LinkAtomProps) => {
     const router = useRouter();

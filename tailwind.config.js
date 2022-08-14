@@ -37,7 +37,18 @@ module.exports = {
         "h1": "6.854rem",
         "h0": "6.854rem",
         "shape": "17.942rem",
-      }
+      },
+      letterSpacing: {
+            tightest: '-.075em',
+            tightest2: '-.065em',
+            tighter: '-.05em',
+            tight: '-.025em',
+            normal: '0',
+            wide: '.025em',
+            wider: '.05em',
+            widest: '.1em',
+            widest: '.25em',
+      },
     },
   },
   plugins: [

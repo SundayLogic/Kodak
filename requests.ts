@@ -1,5 +1,7 @@
+import links from "./utils/links";
+
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-const BASE_URL = "https://api.themoviedb.org/3";
+const BASE_URL = links.urls.dbBase;
 const requests = {
     fetchTrending:`${BASE_URL}/trending/all/day?api_key=${API_KEY}&language=en-US&page=1`,
     fetchMoviePopular:`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`,

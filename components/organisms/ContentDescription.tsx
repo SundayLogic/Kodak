@@ -2,8 +2,8 @@ import TextAtom from "../atoms/Text/TextAtom";
 import ContentDescriptionBtnBox from "./ContentDescriptionBtnBox";
 
 interface ContentDescriptionProps {
-  title: any;
-  overview: any;
+  title: string;
+  overview: string;
 }
 
 const ContentDescription = ({ title, overview }: ContentDescriptionProps) => {
