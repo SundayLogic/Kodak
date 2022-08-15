@@ -18,8 +18,8 @@ const ContentTemplate1 = ({ props }: IndividualContentPageProps) => {
   return (
     <>
       <Header />
-      <ContentDescription title={props.movie.title} overview={props.movie.overview}/>
-      <Backdrop image={props.movie.backdrop_path} height={"h-[100vh]"} quality={80}/>
+      <ContentDescription title={props.movie?.title} overview={props.movie?.overview}/>
+      <Backdrop image={props.movie?.backdrop_path} height={"h-[100vh]"} quality={80}/>
       <ContentSlider contentResults={props.moviesPopular} sliderName={"Other Movies"}/>
     </>
   );
