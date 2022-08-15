@@ -7,9 +7,11 @@ interface HeroProps {
   title: string;
   overview: string;
   btns?: boolean;
-  page?: string;
+  pageName?: string;
+  purpleBg?: boolean;
+  purpleTitleBg?: boolean;
 }
-const Hero = ({ backdrop, title, overview, page }: HeroProps) => {
+const Hero = ({ backdrop, title, overview, pageName , purpleBg, purpleTitleBg}: HeroProps) => {
   return (
     <>
       <Backdrop
@@ -17,8 +19,8 @@ const Hero = ({ backdrop, title, overview, page }: HeroProps) => {
         quality={100}
         height={"h-[40vh] md:h-[60vh] lg:h-[70vh]"}
       />
-      <ContentDescription title={title} overview={overview} />
-      <TextAtom text={page} type={"PAGE"} />
+      <ContentDescription title={title} overview={overview} purpleBg={purpleBg} purpleTitleBg={purpleTitleBg}/>
+      <TextAtom text={pageName} type={"PAGE"} />
     </>
   );
 };

@@ -20,7 +20,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
         backdrop={props.moviesPopular?.[0].backdrop_path}
         title={props.moviesPopular?.[0].title}
         overview={props.moviesPopular?.[0].overview}
-        page={"Movies"}
+        pageName={"Movies"}
+        purpleBg={true}
+        purpleTitleBg
       />
       <ContentSlider sliderName="Trending" contentResults={props.moviesPopular} />
       <ContentSlider sliderName="Top Rated Movies" contentResults={props.moviesTopRated} />

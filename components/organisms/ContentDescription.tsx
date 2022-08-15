@@ -4,14 +4,16 @@ import ContentDescriptionBtnBox from "./ContentDescriptionBtnBox";
 interface ContentDescriptionProps {
   title: string;
   overview: string;
+  purpleBg?: boolean;
+  purpleTitleBg?: boolean;
 }
 
-const ContentDescription = ({ title, overview }: ContentDescriptionProps) => {
+const ContentDescription = ({ title, overview, purpleBg, purpleTitleBg }: ContentDescriptionProps) => {
   return (
     <div className="flex justify-start">
-      <div className="flex flex-col w-[100vw] space-y-6  px-9 lg:px-20 h-[40vh] md:h-[50vh] lg:h-[60vh] justify-center   rounded-lg items-center md:items-start bg-kodakPurple-9/20">
+      <div className={`${purpleBg? "md:bg-kodakPurple-9/20" : null} flex flex-col w-[100vw] space-y-6  px-9 lg:px-20 h-[40vh] md:h-[60vh] lg:h-[70vh] justify-center   rounded-lg items-center md:items-start`} >
         <div className="flex flex-col mt-20 pace-y-2 lg:space-y-6 md:space-y-4">
-          <TextAtom text={title} type={"TITLE"} />
+          <TextAtom text={title} type={"TITLE"} purpleTitleBg={purpleTitleBg}/>
           <TextAtom text={overview} type={"OVERVIEW"} />
         </div>
         <ContentDescriptionBtnBox info  add/>
