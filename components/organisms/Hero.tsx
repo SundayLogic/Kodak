@@ -12,12 +12,13 @@ interface HeroProps {
   purpleTitleBg?: boolean;
 }
 const Hero = ({ backdrop, title, overview, pageName , purpleBg, purpleTitleBg}: HeroProps) => {
+
   return (
     <>
       <Backdrop
         image={backdrop}
         quality={100}
-        height={"h-[40vh] md:h-[60vh] lg:h-[70vh]"}
+        height={"h-[40vh] md:h-[60vh] lg:h-[64vh]"}
       />
       <ContentDescription title={title} overview={overview} purpleBg={purpleBg} purpleTitleBg={purpleTitleBg}/>
       <TextAtom text={pageName} type={"PAGE"} />

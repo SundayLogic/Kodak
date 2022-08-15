@@ -9,10 +9,10 @@ const TextAtom = ({text,type, purpleTitleBg}:TextAtomProps) => {
     let finalCode;
     switch (type) {
       case "TITLE":
-        finalCode = <h1 className={`${purpleTitleBg ? "md:bg-kodakPurple-9/40" : null}text-4xl text-center font-bold tracking-wider md:text-5xl lg:text-h1 md:text-start lg:w-[50vw] text-shadow-lg lg:opacity-90 py-1.5`}>{text}</h1>;
+        finalCode = <h1 className={`${purpleTitleBg ? "md:bg-kodakPurple-9/40" : null}text-4xl text-center font-bold tracking-wider md:text-5xl lg:text-h1 md:text-start lg:w-[55vw] text-shadow-lg lg:opacity-90 py-1.5`}>{text}</h1>;
         break;
       case "OVERVIEW":
-        finalCode = <p className="w-[80vw] md:w-[50vw] lg:w-[50vw] xl:w-[35vw] lg:text-paragraph text-shadow-sm">{text}</p>;
+        finalCode = <p className="w-[80vw] md:w-[50vw] lg:w-[60vw] xl:w-[30vw] lg:text-paragraph text-shadow-sm">{text}</p>;
         break;
       case "DESCRIPTION_LINK":
         finalCode = <p className="text-subtitle tracking-wider">{text}</p>;
@@ -21,7 +21,7 @@ const TextAtom = ({text,type, purpleTitleBg}:TextAtomProps) => {
         finalCode = <h2 className="pl-5 text-xl lg:text-2xl xl:text-3xl">{text}</h2>;
         break;
       case "PAGE":
-        finalCode = <h2 className="pl-5 -z-10 text-h1 md:text-shape absolute tracking-tightest lg:tracking-tightest2 opacity-5 md:inset-y-[4vh] inset-y-[5vh] text-shadow-sm ">{text}</h2>;
+        finalCode = <h2 className="pl-5 -z-10 text-h1 md:text-shape absolute tracking-tightest lg:tracking-tightest2 opacity-10 md:inset-y-[4vh] inset-y-[5vh] text-shadow-sm ">{text}</h2>;
         break;
       default:
         finalCode = <h1>text not found</h1>;
