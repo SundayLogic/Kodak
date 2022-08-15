@@ -8,7 +8,6 @@ interface ContentSliderProps {
 }
 
 const ContentSlider = ({ contentResults, sliderName }: ContentSliderProps) => {
-  console.log(contentResults);
   return (
     <section className="mt-2 px-3 pt-3 h-[27vh] md:h-[34vh] lg:h-[36vh] flex flex-col space-y-3 z-1 ">
       <TextAtom text={sliderName} type={"SECTION"} />

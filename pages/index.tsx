@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import TextAtom from "../components/atoms/Text/TextAtom";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
 import requests from "../utils/requests/requests";

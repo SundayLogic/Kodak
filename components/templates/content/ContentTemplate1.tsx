@@ -1,4 +1,4 @@
-import { Movie } from "../../../typings";
+import { Movie, MovieTrailer } from "../../../typings";
 import Backdrop from "../../atoms/images/Backdrop";
 import ContentDescription from "../../organisms/ContentDescription";
 import ContentSlider from "../../organisms/ContentSlider";
@@ -7,18 +7,19 @@ import Hero from "../../organisms/Hero";
 
 interface IndividualContentPageProps {
   props: {
+    movie: Movie;
+    trailers: MovieTrailer[];
     moviesPopular: Movie[];
     moviesTopRated: Movie[];
     moviesUpcoming: Movie[];
   };
 }
 const ContentTemplate1 = ({ props }: IndividualContentPageProps) => {
-  console.log(props);
   return (
     <>
       <Header />
-      <ContentDescription title={props.moviesPopular[0].title} overview={props.moviesPopular[0].overview}/>
-      <Backdrop image={props.moviesPopular[0].backdrop_path} height={"h-[100vh]"} quality={80}/>
+      <ContentDescription title={props.movie.title} overview={props.movie.overview}/>
+      <Backdrop image={props.movie.backdrop_path} height={"h-[100vh]"} quality={80}/>
       <ContentSlider contentResults={props.moviesPopular} sliderName={"Other Movies"}/>
     </>
   );
