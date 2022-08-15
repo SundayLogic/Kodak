@@ -27,9 +27,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
         purpleBg={true}
         purpleTitleBg
       />
-      <ContentSlider sliderName="Trending" contentResults={randomContentSlider(props?.moviesPopular)} />
-      <ContentSlider sliderName="Top Rated Movies" contentResults={randomContentSlider(props?.moviesTopRated)} />
-      <ContentSlider sliderName="Top Rated Series" contentResults={randomContentSlider(props?.seriesTopRated)} />
+      <ContentSlider sliderName="Trending" contentResults={props.trending} />
+      <ContentSlider sliderName="Top Rated Movies" contentResults={props.moviesTopRated} />
+      <ContentSlider sliderName="Top Rated Series" contentResults={props.seriesTopRated} />
     </>
   );
 };
