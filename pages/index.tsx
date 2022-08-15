@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
+import randomContentNumber from "../utils/functions/randomNumber";
 import requests from "../utils/requests/requests";
 
 interface HomeProps {

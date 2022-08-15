@@ -1,4 +1,5 @@
 import { Serie, Movie } from "../../../typings";
+import randomContentNumber from "../../../utils/functions/randomNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
@@ -13,13 +14,14 @@ interface HomeProps {
 }
 
 const HomeTemplate1 = ({ props }: HomeProps) => {
+  let backdropNumber = randomContentNumber(props.trending, 7000);
   return (
     <>
       <Header />
       <Hero
-        backdrop={props.moviesPopular?.[0].backdrop_path}
-        title={props.moviesPopular?.[0].title}
-        overview={props.moviesPopular?.[0].overview}
+        backdrop={props.moviesPopular?.[backdropNumber].backdrop_path}
+        title={props.moviesPopular?.[backdropNumber].title}
+        overview={props.moviesPopular?.[backdropNumber].overview}
         pageName={"Movies"}
         purpleBg={true}
         purpleTitleBg
