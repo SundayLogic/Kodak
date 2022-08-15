@@ -9,7 +9,8 @@ const links = {
     dbImage: "https://image.tmdb.org/t/p/original",
     dbBase: "https://api.themoviedb.org/3",
     dbMovie: "https://api.themoviedb.org/3/movie/",
-    dbMovieVideosKey: `/videos?api_key=${API_KEY}&language=en-US`,
+    dbVideosKey: `/videos?api_key=${API_KEY}&language=en-US`,
+    dbSerie: "https://api.themoviedb.org/3/tv/",
     dbKey: `?api_key=${API_KEY}&language=en-US`
     },
     sources :  {

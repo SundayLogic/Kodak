@@ -38,7 +38,7 @@ export interface Serie extends Content{
     original_language: string  ;
     original_name: string  ;
 }
-export interface MovieTrailer {
+export interface Trailer {
     id: string;
     iso_639_1: string;
     iso_3166_1: string;
@@ -49,4 +49,14 @@ export interface MovieTrailer {
     site: string;
     size: number;
     type: string;
+}
+export interface IndividualContentProps{
+    content: Serie|Movie ;
+    videos: Trailer[] ;
+    recommended: {
+        topRated: (Serie|Movie)[] | undefined;
+        popular: (Serie|Movie)[] | undefined;
+        upcoming?: Movie[] | undefined;
+        airing?: Serie[] | undefined;
+    }
 }

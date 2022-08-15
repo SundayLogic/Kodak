@@ -1,4 +1,5 @@
 import { Serie, Movie } from "../../../typings";
+import randomContentSlider from "../../../utils/functions/RandomContent";
 import randomContentNumber from "../../../utils/functions/randomNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
@@ -26,9 +27,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
         purpleBg={true}
         purpleTitleBg
       />
-      <ContentSlider sliderName="Trending" contentResults={props.moviesPopular} />
-      <ContentSlider sliderName="Top Rated Movies" contentResults={props.moviesTopRated} />
-      <ContentSlider sliderName="Top Rated Series" contentResults={props.seriesTopRated} />
+      <ContentSlider sliderName="Trending" contentResults={randomContentSlider(props?.moviesPopular)} />
+      <ContentSlider sliderName="Top Rated Movies" contentResults={randomContentSlider(props?.moviesTopRated)} />
+      <ContentSlider sliderName="Top Rated Series" contentResults={randomContentSlider(props?.seriesTopRated)} />
     </>
   );
 };

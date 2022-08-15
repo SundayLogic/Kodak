@@ -1,7 +1,7 @@
 import Image from "next/image";
 import links from "../../../utils/links";
 interface BackdropProps {
-  image: string;
+  image: string | undefined;
   quality: number;
   height?: string;
 }

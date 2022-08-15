@@ -3,9 +3,9 @@ import TextAtom from "../atoms/Text/TextAtom";
 import ContentDescription from "./ContentDescription";
 
 interface HeroProps {
-  backdrop: string;
-  title: string;
-  overview: string;
+  backdrop?: string | undefined;
+  title: string | undefined;
+  overview: string | undefined;
   btns?: boolean;
   pageName?: string;
   purpleBg?: boolean;

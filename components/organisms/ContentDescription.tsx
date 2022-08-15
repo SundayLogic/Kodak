@@ -2,8 +2,8 @@ import TextAtom from "../atoms/Text/TextAtom";
 import ContentDescriptionBtnBox from "./ContentDescriptionBtnBox";
 
 interface ContentDescriptionProps {
-  title: string;
-  overview: string;
+  title: string | undefined;
+  overview: string | undefined;
   purpleBg?: boolean;
   purpleTitleBg?: boolean;
 }
