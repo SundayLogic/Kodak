@@ -6,6 +6,13 @@ interface ContentDescriptionProps {
   overview: string | undefined;
   purpleBg?: boolean;
   purpleTitleBg?: boolean;
+  btns: {
+    play?: boolean;
+    info?: boolean;
+    add:boolean;
+  } 
+  id: number;
+  mediaType: string;
 }
 
 const ContentDescription = ({
@@ -13,6 +20,9 @@ const ContentDescription = ({
   overview,
   purpleBg,
   purpleTitleBg,
+  btns,
+  id,
+  mediaType,
 }: ContentDescriptionProps) => {
   return (
     <div className="flex justify-start">
@@ -25,7 +35,7 @@ const ContentDescription = ({
           <TextAtom text={title} type={"TITLE"} purpleTitleBg={purpleTitleBg} />
           <TextAtom text={overview} type={"OVERVIEW"} />
         </div>
-        <ContentDescriptionBtnBox info add />
+        <ContentDescriptionBtnBox info={btns.info} add={btns.add} play={btns.play} id={id} mediaType={mediaType}/>
       </div>
     </div>
   );

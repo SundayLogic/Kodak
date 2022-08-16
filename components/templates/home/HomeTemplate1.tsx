@@ -16,16 +16,30 @@ interface HomeProps {
 
 const HomeTemplate1 = ({ props }: HomeProps) => {
   let backdropNumber = randomContentNumber(props.trending, 7000);
+  console.log(props)
+  const btnProps = {
+    info: true,
+    play: false,
+    add: true,
+  }
+  const contentTitle = () => props.trending?.[backdropNumber].title ? props.trending[backdropNumber].title : props.trending?.[backdropNumber].name
+  const movieOrTv = () => props.trending?.[backdropNumber].title ? "movie" : "tv";
+  const contentDataProps = {
+    id: props.trending?.[backdropNumber].id,
+    mediaType: movieOrTv(),
+  }
   return (
     <>
       <Header />
       <Hero
-        backdrop={props.moviesPopular?.[backdropNumber].backdrop_path}
-        title={props.moviesPopular?.[backdropNumber].title}
-        overview={props.moviesPopular?.[backdropNumber].overview}
-        pageName={"Movies"}
+        backdrop={props.trending?.[backdropNumber].backdrop_path}
+        title={contentTitle()}
+        overview={props.trending?.[backdropNumber].overview}
+        pageName={"Home"}
         purpleBg={true}
         purpleTitleBg
+        btns={btnProps}
+        contentData={contentDataProps}
       />
       <ContentSlider sliderName="Trending" contentResults={props.trending} />
       <ContentSlider sliderName="Top Rated Movies" contentResults={props.moviesTopRated} />
