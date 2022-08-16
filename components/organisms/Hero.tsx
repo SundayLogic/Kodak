@@ -15,7 +15,7 @@ interface HeroProps {
     info?: boolean;
     add: boolean;
   };
-  contentData: {
+  contentData?: {
     id: number;
     mediaType: string;
   }

@@ -6,8 +6,8 @@ interface ContentDescriptionBtnBoxProps {
     play?: boolean;
     info?: boolean;
     add: boolean;
-    id: number;
-    mediaType: string;
+    id: number | undefined;
+    mediaType: string | undefined;
 }
 const ContentDescriptionBtnBox = ({play,info,add, id, mediaType}:ContentDescriptionBtnBoxProps) => {
   const buttonCreator = (text: string, iconName: Icons) => (

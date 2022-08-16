@@ -11,8 +11,8 @@ interface ContentDescriptionProps {
     info?: boolean;
     add:boolean;
   } 
-  id: number;
-  mediaType: string;
+  id: number | undefined;
+  mediaType: string | undefined;
 }
 
 const ContentDescription = ({
