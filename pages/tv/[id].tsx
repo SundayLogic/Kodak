@@ -1,9 +1,13 @@
 import IndividualContent from "../../components/pages/IndividualContent";
-import { IndividualContentProps} from "../../typings";
+import { IndividualContentProps } from "../../typings";
 import links from "../../utils/links";
 import requests from "../../utils/requests/requests";
-
-const serie = ({ content, trailers, recommended, contentId }: IndividualContentProps) => {
+const serie = ({
+  content,
+  trailers,
+  recommended,
+  contentId,
+}: IndividualContentProps) => {
   const recommendedProp = {
     popular: recommended?.popular,
     topRated: recommended?.topRated,
@@ -38,7 +42,7 @@ export const getServerSideProps = async (context: any) => {
     props: {
       contentId: id,
       content: serie,
-      trailers : trailers.results,
+      trailers: trailers.results,
       recommended: {
         popular: seriePopular.results,
         topRated: serieTopRated.results,

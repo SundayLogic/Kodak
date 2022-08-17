@@ -55,10 +55,6 @@ const SerieTemplate = ({
         mediaType={content.media_type}
         isPlayWindow={changePlayer}
       />
-      <ContentSlider
-        sliderName={"Recommended Series"}
-        contentResults={randomContentSlider(recommended?.popular)}
-      />
       {isVideoPlayer ? (
         <VideoPlayerWindow
           closePlayer={changePlayer}

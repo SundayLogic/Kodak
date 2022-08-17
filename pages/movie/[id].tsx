@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import IndividualContent from "../../components/pages/IndividualContent";
 import { IndividualContentProps, Trailer } from "../../typings";
 import links from "../../utils/links";
