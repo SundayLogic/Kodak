@@ -18,13 +18,15 @@ const MovieTemplate = ({
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
   const [videoKey, setVideoKey] = useState<string>("");
   const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
-    useEffect(() => {
-    const findKey = (search: string) =>
-      trailers.filter((e: Trailer) => e.type === search).map((e: Trailer) => e.key);
+  useEffect(() => {
+    const findKey = () =>
+      trailers
+        .filter((trailer: Trailer) => trailer.name === "Official Trailer" || trailer.name === "Trailer")
+        .map((trailer: Trailer) => trailer.key);
     if (trailers.length === 0) {
       return setVideoKey("rPleicjySdI");
-    } else if (findKey("Official Trailer").length >= 1) {
-      return setVideoKey(findKey("Trailer")[0]);
+    } else if (findKey().length >= 1) {
+      return setVideoKey(findKey()[0]);
     } else {
       return setVideoKey(trailers[0].key);
     }
@@ -34,7 +36,7 @@ const MovieTemplate = ({
     play: true,
     add: false,
   };
-  
+  console.log(trailers);
   return (
     <>
       <Header />

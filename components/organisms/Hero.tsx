@@ -14,7 +14,7 @@ interface HeroProps {
     info?: boolean;
     add: boolean;
   };
-  id:number
+  id:number|undefined
   mediaType: string;
   playProps?: {
     active: boolean;

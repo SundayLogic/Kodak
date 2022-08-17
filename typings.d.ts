@@ -61,3 +61,16 @@ export interface IndividualContentProps{
         airing?: Serie[] | undefined;
     }
 }
+export interface ContentPageProps{
+    topRated: (Serie|Movie)[] | undefined;
+    popular: (Serie|Movie)[] | undefined;
+    upcoming?: Movie[] | undefined;
+    airing?: Serie[]|undefined;
+}
+export interface PageMovieProps {
+    props: {
+        popular: Movie[];
+        topRated: Movie[];
+        upcoming: Movie[];
+    }
+}
