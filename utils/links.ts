@@ -11,7 +11,8 @@ const links = {
     dbMovie: "https://api.themoviedb.org/3/movie/",
     dbVideosKey: `/videos?api_key=${API_KEY}&language=en-US`,
     dbSerie: "https://api.themoviedb.org/3/tv/",
-    dbKey: `?api_key=${API_KEY}&language=en-US`
+    dbKey: `?api_key=${API_KEY}&language=en-US`,
+    youtubeSearch: "https://www.youtube.com/watch?v=",
     },
     sources :  {
     logo: "/images/BendedLogo2.png",

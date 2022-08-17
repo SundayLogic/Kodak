@@ -6,7 +6,7 @@ type ContentType = "tv" | "movie";
 interface IndividualContentProps {
   contentType: ContentType;
   content: Serie | Movie;
-  videos: Trailer[];
+  trailers: Trailer[];
   recommended: {
     popular: (Serie | Movie)[] | undefined;
     topRated: (Serie | Movie)[] | undefined;
@@ -16,7 +16,7 @@ interface IndividualContentProps {
 }
 const IndividualContent = ({
   content,
-  videos,
+  trailers,
   recommended,
   contentType,
 }: IndividualContentProps) => {
@@ -25,13 +25,13 @@ const IndividualContent = ({
       {contentType === "movie" ? (
         <MovieTemplate
           content={content}
-          videos={videos}
+          trailers={trailers}
           recommended={recommended}
         />
       ) : (
         <SerieTemplate
           content={content}
-          videos={videos}
+          trailers={trailers}
           recommended={recommended}
         />
       )}

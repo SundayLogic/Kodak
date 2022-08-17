@@ -1,7 +1,10 @@
-import { ContentType } from "../../typings";
+import { useState } from "react";
+import { ContentType, Trailer } from "../../typings";
+import useYoutubeTrailer from "../../utils/hooks/useYoutubeTrailer";
 import Backdrop from "../atoms/images/Backdrop";
 import TextAtom from "../atoms/Text/TextAtom";
 import ContentDescription from "./ContentDescription";
+import VideoPlayerWindow from "./VideoPlayerWindow";
 
 interface HeroProps {
   backdrop?: string | undefined;
@@ -15,9 +18,11 @@ interface HeroProps {
     info?: boolean;
     add: boolean;
   };
-  contentData?: {
-    id: number;
-    mediaType: string;
+  id:number
+  mediaType: string;
+  playProps?: {
+    active: boolean;
+    changePlay: any;
   }
 }
 const Hero = ({
@@ -28,7 +33,9 @@ const Hero = ({
   purpleBg,
   purpleTitleBg,
   btns,
-  contentData,
+  id,
+  mediaType,
+  playProps,
 }: HeroProps) => {
   const btnsProps = {
     info: btns.info,
@@ -48,8 +55,10 @@ const Hero = ({
         purpleBg={purpleBg}
         purpleTitleBg={purpleTitleBg}
         btns={btnsProps}
-        id={contentData?.id}
-        mediaType={contentData?.mediaType}
+        id={id}
+        mediaType={mediaType}
+        playWindow={playProps?.changePlay}
+        activeWindow={playProps?.active}
       />
       <TextAtom text={pageName} type={"PAGE"} />
     </>

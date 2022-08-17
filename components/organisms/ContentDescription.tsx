@@ -9,10 +9,12 @@ interface ContentDescriptionProps {
   btns: {
     play?: boolean;
     info?: boolean;
-    add:boolean;
-  } 
+    add: boolean;
+  };
   id: number | undefined;
   mediaType: string | undefined;
+  playWindow?: any;
+  activeWindow?: any
 }
 
 const ContentDescription = ({
@@ -23,6 +25,8 @@ const ContentDescription = ({
   btns,
   id,
   mediaType,
+  playWindow,
+  activeWindow,
 }: ContentDescriptionProps) => {
   return (
     <div className="flex justify-start">
@@ -35,7 +39,15 @@ const ContentDescription = ({
           <TextAtom text={title} type={"TITLE"} purpleTitleBg={purpleTitleBg} />
           <TextAtom text={overview} type={"OVERVIEW"} />
         </div>
-        <ContentDescriptionBtnBox info={btns.info} add={btns.add} play={btns.play} id={id} mediaType={mediaType}/>
+        <ContentDescriptionBtnBox
+          info={btns.info}
+          add={btns.add}
+          play={btns.play}
+          id={id}
+          mediaType={mediaType}
+          playWindow={playWindow}
+          activeWindow={activeWindow}
+        />
       </div>
     </div>
   );
