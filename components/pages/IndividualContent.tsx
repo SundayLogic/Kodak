@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
+import YouTubePlayer from "react-player/youtube";
 import { Serie, Movie, Trailer} from "../../typings";
+import links from "../../utils/links";
 import MovieTemplate from "../templates/content/MovieTemplate";
 import SerieTemplate from "../templates/content/SerieTemplate";
 type ContentType = "tv" | "movie";

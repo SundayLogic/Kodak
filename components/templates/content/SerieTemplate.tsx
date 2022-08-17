@@ -1,25 +1,44 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { IndividualContentProps } from "../../../typings";
 import randomContentSlider from "../../../utils/functions/RandomContent";
+import links from "../../../utils/links";
 import Backdrop from "../../atoms/images/Backdrop";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
 const SerieTemplate = ({
   content,
-  trailers,
   recommended,
+  trailers,
 }: IndividualContentProps) => {
   const btnProps = {
     info: false,
     add: true,
     play: true,
   };
-
-  const [play, setPlay] = useState<boolean>(false);
-  const changePlayProp = useCallback(() => {
-    setPlay(!play);
+  const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
+  const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
+  const [videoKey, setVideoKey] = useState<any>([]);
+  const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
+  useEffect(() => {
+    const findKey = (search: string) =>
+      trailers.filter((e: any) => e.type === search).map((e: any) => e.key);
+    if (trailers.length === 0) {
+      return setVideoKey("rPleicjySdI");
+    } else if (findKey("Official Trailer").length >= 1) {
+      return setVideoKey(findKey("Official Trailer")[0]);
+    } else if (findKey("Trailer").length >= 1) {
+      return setVideoKey(findKey("Trailer")[0]);
+    } else {
+      return setVideoKey(trailers[0].key);
+    }
   }, []);
+
+  const btnsProps = {
+    info: false,
+    play: true,
+    add: true,
+  };
 
   return (
     <>
@@ -30,12 +49,12 @@ const SerieTemplate = ({
         height={"h-[100vh]"}
       />
       <Hero
-        id={content.id}
-        title={content?.name}
+        title={content?.title}
         overview={content?.overview}
-        btns={btnProps}
+        btns={btnsProps}
+        id={content.id}
         mediaType={content.media_type}
-        changePlay={changePlayProp}
+        isPlayWindow={youtubeUrl}
       />
       <ContentSlider
         sliderName={"Recommended Series"}

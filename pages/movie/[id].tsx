@@ -1,8 +1,9 @@
+import { useState, useEffect } from "react";
 import IndividualContent from "../../components/pages/IndividualContent";
-import { IndividualContentProps } from "../../typings";
+import { IndividualContentProps, Trailer } from "../../typings";
 import links from "../../utils/links";
 import requests from "../../utils/requests/requests";
-const movie = ({ content, trailers , recommended }: IndividualContentProps) => {
+const movie = ({ content, trailers, recommended }: IndividualContentProps) => {
   const recommendedProp = {
     popular: recommended?.popular,
     topRated: recommended?.topRated,
@@ -13,8 +14,8 @@ const movie = ({ content, trailers , recommended }: IndividualContentProps) => {
       <IndividualContent
         content={content}
         contentType={"movie"}
-        trailers={trailers}
         recommended={recommendedProp}
+        trailers={trailers}
       />
     </>
   );

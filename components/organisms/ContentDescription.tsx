@@ -14,7 +14,7 @@ interface ContentDescriptionProps {
   id: number | undefined;
   mediaType: string | undefined;
   playWindow?: any;
-  activeWindow?: any
+  isPlayWindow?: any
 }
 
 const ContentDescription = ({
@@ -25,8 +25,7 @@ const ContentDescription = ({
   btns,
   id,
   mediaType,
-  playWindow,
-  activeWindow,
+  isPlayWindow,
 }: ContentDescriptionProps) => {
   return (
     <div className="flex justify-start">
@@ -45,8 +44,7 @@ const ContentDescription = ({
           play={btns.play}
           id={id}
           mediaType={mediaType}
-          playWindow={playWindow}
-          activeWindow={activeWindow}
+          isPlayWindow={isPlayWindow}
         />
       </div>
     </div>

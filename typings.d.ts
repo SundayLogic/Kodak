@@ -52,7 +52,7 @@ export interface Trailer {
 }
 export interface IndividualContentProps{
     content: Serie|Movie ;
-    trailers: Trailer[] ;
+    trailers: Trailer[];
     recommended: {
         topRated: (Serie|Movie)[] | undefined;
         popular: (Serie|Movie)[] | undefined;

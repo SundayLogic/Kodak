@@ -9,8 +9,7 @@ interface ContentDescriptionBtnBoxProps {
   add: boolean;
   id: number | undefined;
   mediaType: string | undefined;
-  playWindow:  any;
-  activeWindow: any;
+  isPlayWindow:  any;
 }
 const ContentDescriptionBtnBox = ({
   play,
@@ -18,8 +17,7 @@ const ContentDescriptionBtnBox = ({
   add,
   id,
   mediaType,
-  playWindow,
-  activeWindow,
+  isPlayWindow,
 }: ContentDescriptionBtnBoxProps) => {
   const buttonCreator = (text: string, iconName: Icons) => (
     <ContentDescriptionBtn text={text} iconName={iconName} />
@@ -42,7 +40,7 @@ const ContentDescriptionBtnBox = ({
         />
       </span>
       <span className={`${buttonShow(play)}`}>
-        <ActionBtnAtom action={playWindow} content={buttonCreator("Play", "PLAY")} />
+        <ActionBtnAtom action={isPlayWindow} content={buttonCreator("Play", "PLAY")} />
       </span>
     </div>
   );
