@@ -16,12 +16,14 @@ interface IndividualContentProps {
     airing?: Serie[] | undefined;
     upcoming?: Movie[] | undefined;
   };
+  contentId: number;
 }
 const IndividualContent = ({
   content,
   trailers,
   recommended,
   contentType,
+  contentId,
 }: IndividualContentProps) => {
   return (
     <>
@@ -30,12 +32,14 @@ const IndividualContent = ({
           content={content}
           trailers={trailers}
           recommended={recommended}
+          contentId={contentId}
         />
       ) : (
         <SerieTemplate
           content={content}
           trailers={trailers}
           recommended={recommended}
+          contentId={contentId}
         />
       )}
     </>

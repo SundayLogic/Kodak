@@ -12,29 +12,29 @@ const MovieTemplate = ({
   content,
   recommended,
   trailers,
+  contentId,
 }: IndividualContentProps) => {
-  const btnsProps = {
-    info: false,
-    play: true,
-    add: true,
-  };
   const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
-  const [videoKey, setVideoKey] = useState<any>([]);
+  const [videoKey, setVideoKey] = useState<string>("");
   const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
-  useEffect(() => {
+    useEffect(() => {
     const findKey = (search: string) =>
-      trailers.filter((e: any) => e.type === search).map((e: any) => e.key);
+      trailers.filter((e: Trailer) => e.type === search).map((e: Trailer) => e.key);
     if (trailers.length === 0) {
       return setVideoKey("rPleicjySdI");
     } else if (findKey("Official Trailer").length >= 1) {
-      return setVideoKey(findKey("Official Trailer")[0]);
-    } else if (findKey("Trailer").length >= 1) {
       return setVideoKey(findKey("Trailer")[0]);
     } else {
       return setVideoKey(trailers[0].key);
     }
   }, []);
+  const btnsProps = {
+    info: true,
+    play: true,
+    add: false,
+  };
+  
   return (
     <>
       <Header />

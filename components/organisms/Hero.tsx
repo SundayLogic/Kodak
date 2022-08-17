@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { ContentType, Trailer } from "../../typings";
 import Backdrop from "../atoms/images/Backdrop";
 import TextAtom from "../atoms/Text/TextAtom";
 import ContentDescription from "./ContentDescription";
@@ -22,7 +20,7 @@ interface HeroProps {
     active: boolean;
     changePlay: any;
   }
-  isPlayWindow: any;
+  isPlayWindow?: any;
 }
 const Hero = ({
   backdrop,

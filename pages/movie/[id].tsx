@@ -3,7 +3,7 @@ import IndividualContent from "../../components/pages/IndividualContent";
 import { IndividualContentProps, Trailer } from "../../typings";
 import links from "../../utils/links";
 import requests from "../../utils/requests/requests";
-const movie = ({ content, trailers, recommended }: IndividualContentProps) => {
+const movie = ({ content, trailers, recommended, contentId }: IndividualContentProps) => {
   const recommendedProp = {
     popular: recommended?.popular,
     topRated: recommended?.topRated,
@@ -16,6 +16,7 @@ const movie = ({ content, trailers, recommended }: IndividualContentProps) => {
         contentType={"movie"}
         recommended={recommendedProp}
         trailers={trailers}
+        contentId={contentId}
       />
     </>
   );
@@ -36,6 +37,7 @@ export const getServerSideProps = async (context: any) => {
     ]);
   return {
     props: {
+      contentId: id,
       content: movie,
       trailers: trailers.results,
       recommended: {

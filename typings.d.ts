@@ -51,6 +51,7 @@ export interface Trailer {
     type: string;
 }
 export interface IndividualContentProps{
+    contentId: number
     content: Serie|Movie ;
     trailers: Trailer[];
     recommended: {
