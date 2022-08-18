@@ -18,7 +18,6 @@ const SerieTemplate = ({
     play: true,
   };
   const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
-  const reloadFunc = ():any => window.location.reload();
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
   let [videoKey, setVideoKey] = useState<string>("");
   let youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
@@ -35,7 +34,7 @@ const SerieTemplate = ({
     } else {
       return setVideoKey(trailers?.[0].key);
     }
-  }, []);
+  });
   const btnsProps = {
     info: false,
     play: true,
