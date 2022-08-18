@@ -1,4 +1,5 @@
 import {  PageMovieProps } from "../../../typings";
+import randomContentNumber from "../../../utils/functions/randomContentNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
@@ -8,7 +9,8 @@ const MoviesPageTemplate = ({ props }: PageMovieProps) => {
     play: false,
     add: true,
   };
-  const backdropMovie = props.upcoming?.[0]
+  let randomNumber = randomContentNumber(props.upcoming,7000)
+  const backdropMovie = props.upcoming?.[randomNumber]
   return (
     <>
       <Header />

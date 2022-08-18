@@ -16,15 +16,16 @@ interface HomeProps {
 
 const HomeTemplate1 = ({ props }: HomeProps) => {
   let backdropNumber = randomContentNumber(props.trending, 7000);
+  let backdropContent = props.trending?.[backdropNumber]
   const btnProps = {
     info: true,
     play: false,
     add: true,
   };
   const contentTitle = () =>
-    props.trending?.[0].title
-      ? props.trending[0].title
-      : props.trending?.[0].name;
+    backdropContent?.title
+      ? backdropContent?.title
+      : backdropContent?.name;
   const movieOrTv = () =>
     props.trending?.[0].title ? "movie" : "tv";
   const contentDataProps = {
@@ -40,9 +41,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
     <>
       <Header />
       <Hero
-        backdrop={props.trending?.[0].backdrop_path}
+        backdrop={backdropContent?.backdrop_path}
         title={contentTitle()}
-        overview={props.trending?.[0].overview}
+        overview={backdropContent?.overview}
         pageName={"Home"}
         purpleBg={true}
         purpleTitleBg

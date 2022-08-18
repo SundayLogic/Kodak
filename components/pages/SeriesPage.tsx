@@ -1,10 +1,16 @@
-import SeriesTemplate1 from "../templates/series/SeriesTemplate1";
+import { PageSeriesProps } from "../../typings";
+import SeriesTemplate from "../templates/series/SeriesTemplate";
 
-const SeriesPage = () => {
-    return(
-        <>
-            <SeriesTemplate1 />
-        </> 
-        )
+const SeriesPage = (props: PageSeriesProps) => {
+  const seriesProps = {
+    popular: props.props.popular,
+    topRated: props.props.topRated,
+    airing: props.props.airing,
+  };
+  return (
+    <>
+      <SeriesTemplate props={seriesProps}/>
+    </>
+  );
 };
 export default SeriesPage;

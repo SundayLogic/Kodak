@@ -32,9 +32,9 @@ const MovieTemplate = ({
     }
   }, []);
   const btnsProps = {
-    info: true,
+    info: false,
     play: true,
-    add: false,
+    add: true,
   };
   return (
     <>

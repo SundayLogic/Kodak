@@ -1,3 +1,4 @@
+import Footer from "../../components/organisms/Footer";
 import IndividualContent from "../../components/pages/IndividualContent";
 import { IndividualContentProps } from "../../typings";
 import links from "../../utils/links";

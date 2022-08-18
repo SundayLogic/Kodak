@@ -74,3 +74,10 @@ export interface PageMovieProps {
         upcoming: Movie[];
     }
 }
+export interface PageSeriesProps {
+    props: {
+        popular: Serie[];
+        topRated: Serie[];
+        airing: Serie[];
+    }
+}

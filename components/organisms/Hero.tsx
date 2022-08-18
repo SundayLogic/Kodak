@@ -14,12 +14,12 @@ interface HeroProps {
     info?: boolean;
     add: boolean;
   };
-  id:number|undefined
+  id: number | undefined;
   mediaType: string;
   playProps?: {
     active: boolean;
     changePlay: any;
-  }
+  };
   isPlayWindow?: any;
 }
 const Hero = ({
@@ -37,8 +37,8 @@ const Hero = ({
   const btnsProps = {
     info: btns.info,
     add: btns.add,
-    play: btns.play
-  }
+    play: btns.play,
+  };
   return (
     <>
       <Backdrop

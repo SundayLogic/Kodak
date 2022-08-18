@@ -22,9 +22,11 @@ const SerieTemplate = ({
   const [videoKey, setVideoKey] = useState<string>("");
   const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
 
-    useEffect(() => {
+  useEffect(() => {
     const findKey = (search: string) =>
-      trailers?.filter((e: Trailer) => e.type === search).map((e: Trailer) => e.key);
+      trailers
+        ?.filter((e: Trailer) => e.type === search)
+        .map((e: Trailer) => e.key);
     if (trailers?.length === 0) {
       return setVideoKey("rPleicjySdI");
     } else if (findKey("Trailer")?.length >= 1) {
@@ -54,6 +56,10 @@ const SerieTemplate = ({
         id={content.id}
         mediaType={content.media_type}
         isPlayWindow={changePlayer}
+      />
+      <ContentSlider
+        sliderName={"Recommended Series"}
+        contentResults={randomContentSlider(recommended.airing)}
       />
       {isVideoPlayer ? (
         <VideoPlayerWindow

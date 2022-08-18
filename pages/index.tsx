@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../components/organisms/Footer";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
 import randomContentNumber from "../utils/functions/randomContentNumber";
@@ -34,6 +35,7 @@ const Home = ({
 
       <main>
         <HomePage props={homeProps} />
+        <Footer />
       </main>
     </div>
   );
