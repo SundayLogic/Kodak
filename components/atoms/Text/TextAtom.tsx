@@ -21,7 +21,7 @@ const TextAtom = ({text,type, purpleTitleBg}:TextAtomProps) => {
         finalCode = <h2 className="pl-5 text-xl lg:text-2xl xl:text-3xl">{text}</h2>;
         break;
       case "PAGE":
-        finalCode = <h2 className="pl-5 -z-10 text-h1 md:text-shape absolute tracking-tightest lg:tracking-tightest2 opacity-20 md:inset-y-[48vh] inset-y-[5vh] text-shadow-sm ">{text}</h2>;
+        finalCode = <h2 className="pl-5 -z-10 text-h1 md:text-shape absolute tracking-tightest lg:tracking-tightest2 opacity-20 md:inset-y-[43vh] inset-y-[5vh] text-shadow-sm ">{text}</h2>;
         break;
       default:
         finalCode = <h1>text not found</h1>;

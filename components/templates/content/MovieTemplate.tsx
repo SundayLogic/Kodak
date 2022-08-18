@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IndividualContentProps, Trailer } from "../../../typings";
+import fetchTrailerKey from "../../../utils/functions/fetchTrailerKey";
 import randomContentSlider from "../../../utils/functions/RandomContent";
 import links from "../../../utils/links";
 import Backdrop from "../../atoms/images/Backdrop";
@@ -21,7 +22,10 @@ const MovieTemplate = ({
   useEffect(() => {
     const findKey = () =>
       trailers
-        .filter((trailer: Trailer) => trailer.name === "Official Trailer" || trailer.name === "Trailer")
+        .filter(
+          (trailer: Trailer) =>
+            trailer.name === "Official Trailer" || trailer.name === "Trailer"
+        )
         .map((trailer: Trailer) => trailer.key);
     if (trailers.length === 0) {
       return setVideoKey("rPleicjySdI");

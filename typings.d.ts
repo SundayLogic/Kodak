@@ -81,3 +81,10 @@ export interface PageSeriesProps {
         airing: Serie[];
     }
 }
+export interface PageTrendingProps{
+    props: {
+        popularMovies: Movie[];
+        popularSeries: Serie[];
+        trending: (Serie|Movie)[];
+    }
+}

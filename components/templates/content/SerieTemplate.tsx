@@ -18,29 +18,30 @@ const SerieTemplate = ({
     play: true,
   };
   const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
+  const reloadFunc = ():any => window.location.reload();
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
-  const [videoKey, setVideoKey] = useState<string>("");
-  const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
+  let [videoKey, setVideoKey] = useState<string>("");
+  let youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
 
   useEffect(() => {
-    const findKey = (search: string) =>
+    const findKey = () =>
       trailers
-        ?.filter((e: Trailer) => e.type === search)
+        ?.filter((e: Trailer) => e.type === "Official Trailer" || e.type === "Trailer")
         .map((e: Trailer) => e.key);
     if (trailers?.length === 0) {
       return setVideoKey("rPleicjySdI");
-    } else if (findKey("Trailer")?.length >= 1) {
-      return setVideoKey(findKey("Trailer")[0]);
+    } else if (findKey()?.length >= 1) {
+      return setVideoKey(findKey()[0]);
     } else {
       return setVideoKey(trailers?.[0].key);
     }
   }, []);
-
   const btnsProps = {
     info: false,
     play: true,
     add: true,
   };
+  console.log(trailers)
   return (
     <>
       <Header />
