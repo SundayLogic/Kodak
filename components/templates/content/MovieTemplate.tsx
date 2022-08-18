@@ -36,7 +36,6 @@ const MovieTemplate = ({
     play: true,
     add: false,
   };
-  console.log(trailers);
   return (
     <>
       <Header />

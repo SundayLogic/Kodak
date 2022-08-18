@@ -6,17 +6,6 @@ const SeriesTemplate1 = () => {
     <>
       <Header />
 
-      <Hero
-        backdrop={popular?.[0].backdrop_path}
-        title={heroContent()?.title}
-        overview={heroContent()?.overview}
-        pageName={"Series"}
-        purpleBg={true}
-        purpleTitleBg
-        btns={btnsProps}
-        mediaType={"movie"}
-        id={heroContent()?.id}
-      />
     </>
   );
 };

@@ -1,27 +1,38 @@
 import MoviesPage from "../../components/pages/MoviesPage";
-import { PageMovieProps } from "../../typings";
-import links from "../../utils/links";
+import { Movie} from "../../typings";
 import requests from "../../utils/requests/requests";
 
-const movies = ({props}:PageMovieProps) => {
+interface MoviePageProps {
+  popular: Movie[];
+  topRated: Movie[];
+  upcoming: Movie[];
+}
+const movies = ({ popular, topRated, upcoming }: MoviePageProps) => {
+  const moviesProps = {
+    popular: popular,
+    topRated: topRated,
+    upcoming: upcoming,
+  };
   return (
     <>
-      <MoviesPage content={props}/>
+      <MoviesPage props={moviesProps} />
     </>
   );
 };
+
 export default movies;
+
 export const getServerSideProps = async () => {
-  const [moviesPopular, moviesTopRated, moviesUpcoming] = await Promise.all([
+  const [popular, topRated, upcoming] = await Promise.all([
     fetch(requests.fetchMoviesPopular).then((res) => res.json()),
     fetch(requests.fetchMoviesTopRated).then((res) => res.json()),
     fetch(requests.fetchMoviesUpcoming).then((res) => res.json()),
   ]);
   return {
     props: {
-      topRated: moviesPopular?.results,
-      popular: moviesTopRated?.results,
-      upcoming: moviesUpcoming?.results,
+      popular: popular.results,
+      topRated: topRated.results,
+      upcoming: upcoming.results,
     },
   };
 };

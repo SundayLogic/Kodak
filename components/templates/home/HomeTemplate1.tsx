@@ -1,7 +1,6 @@
 import { useState, useCallback} from "react";
 import { Serie, Movie } from "../../../typings";
-import randomContentSlider from "../../../utils/functions/RandomContent";
-import randomContentNumber from "../../../utils/functions/randomNumber";
+import randomContentNumber from "../../../utils/functions/randomContentNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
@@ -23,13 +22,13 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
     add: true,
   };
   const contentTitle = () =>
-    props.trending?.[backdropNumber].title
-      ? props.trending[backdropNumber].title
-      : props.trending?.[backdropNumber].name;
+    props.trending?.[0].title
+      ? props.trending[0].title
+      : props.trending?.[0].name;
   const movieOrTv = () =>
-    props.trending?.[backdropNumber].title ? "movie" : "tv";
+    props.trending?.[0].title ? "movie" : "tv";
   const contentDataProps = {
-    id: props.trending?.[backdropNumber].id,
+    id: props.trending?.[0].id,
     mediaType: movieOrTv(),
   };
 
@@ -41,9 +40,9 @@ const HomeTemplate1 = ({ props }: HomeProps) => {
     <>
       <Header />
       <Hero
-        backdrop={props.trending?.[backdropNumber].backdrop_path}
+        backdrop={props.trending?.[0].backdrop_path}
         title={contentTitle()}
-        overview={props.trending?.[backdropNumber].overview}
+        overview={props.trending?.[0].overview}
         pageName={"Home"}
         purpleBg={true}
         purpleTitleBg

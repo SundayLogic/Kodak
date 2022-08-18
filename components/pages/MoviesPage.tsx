@@ -1,14 +1,15 @@
-import { ContentPageProps, PageMovieProps } from "../../typings";
-import MoviesTemplate1 from "../templates/movies/MoviesTemplate1";
+import { PageMovieProps } from "../../typings";
+import MoviesPageTemplate from "../templates/movies/MoviesTemplate";
 
-const MoviesPage = ({ topRated, upcoming, popular}: PageMovieProps) => {
+const MoviesPage = (props: PageMovieProps) => {
+  const moviesProps = {
+    popular: props.props.popular,
+    topRated: props.props.topRated,
+    upcoming: props.props.upcoming,
+  };
   return (
     <>
-      <MoviesTemplate1
-        topRated={topRated}
-        upcoming={upcoming}
-        popular={popular}
-      />
+      <MoviesPageTemplate props={moviesProps} />
     </>
   );
 };
