@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IndividualContentProps, Trailer } from "../../../typings";
 import fetchTrailerKey from "../../../utils/functions/fetchTrailerKey";
 import randomContentSlider from "../../../utils/functions/RandomContent";
+import reloadPage from "../../../utils/functions/reloadPage";
 import links from "../../../utils/links";
 import Backdrop from "../../atoms/images/Backdrop";
 import ContentSlider from "../../organisms/ContentSlider";
@@ -17,8 +18,8 @@ const MovieTemplate = ({
 }: IndividualContentProps) => {
   const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
-  const [videoKey, setVideoKey] = useState<string>("");
-  const youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
+  let [videoKey, setVideoKey] = useState<any>("")
+  let youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
   useEffect(() => {
     const findKey = () =>
       trailers
@@ -34,7 +35,7 @@ const MovieTemplate = ({
     } else {
       return setVideoKey(trailers[0].key);
     }
-  }, []);
+  });
   const btnsProps = {
     info: false,
     play: true,
