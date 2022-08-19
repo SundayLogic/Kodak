@@ -27,7 +27,7 @@ const MoviesPageTemplate = ({ props }: PageMovieProps) => {
           mediaType={"movie"}
         />
       </div>
-      <div className="mt-28 md:mt-0">
+      <div className="mt-28">
         <ContentSlider sliderName="Upcoming" contentResults={props.upcoming} />
       </div>
       <ContentSlider sliderName="Popular" contentResults={props.popular} />
