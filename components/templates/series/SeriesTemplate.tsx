@@ -10,19 +10,19 @@ const SeriesTemplate = ({ props }: PageSeriesProps) => {
     add: true,
   };
   let randomNumber = randomContentNumber(props.topRated, 7000);
-  const backdropMovie = props.topRated?.[randomNumber];
+  const backdropSerie = props.popular?.[randomNumber];
   return (
     <>
       <Header />
       <Hero
-        backdrop={backdropMovie?.backdrop_path}
-        title={backdropMovie?.name}
-        overview={backdropMovie?.overview}
+        backdrop={backdropSerie?.backdrop_path}
+        title={backdropSerie?.name}
+        overview={backdropSerie?.overview}
         pageName={"Series"}
         purpleBg={true}
         purpleTitleBg
         btns={btnProps}
-        id={backdropMovie?.id}
+        id={backdropSerie?.id}
         mediaType={"tv"}
       />
       <ContentSlider sliderName="Top Rated" contentResults={props.topRated} />
