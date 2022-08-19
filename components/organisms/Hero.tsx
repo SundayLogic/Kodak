@@ -44,7 +44,7 @@ const Hero = ({
       <Backdrop
         image={backdrop}
         quality={100}
-        height={"h-[40vh] md:h-[60vh] lg:h-[64vh]"}
+        height={"h-[49vh] md:h-[60vh] lg:h-[75vh]"}
       />
       <ContentDescription
         title={title}
