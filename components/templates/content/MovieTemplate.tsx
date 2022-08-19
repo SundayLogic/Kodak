@@ -18,7 +18,7 @@ const MovieTemplate = ({
 }: IndividualContentProps) => {
   const [isVideoPlayer, setIsVideoPlayer] = useState<boolean>(false);
   const changePlayer = () => setIsVideoPlayer(!isVideoPlayer);
-  let [videoKey, setVideoKey] = useState<any>("")
+  let [videoKey, setVideoKey] = useState<any>("");
   let youtubeUrl = `${links.urls.youtubeSearch}${videoKey}`;
   useEffect(() => {
     const findKey = () =>
@@ -49,14 +49,22 @@ const MovieTemplate = ({
         quality={100}
         height={"h-[100vh]"}
       />
-      <Hero
-        title={content?.title}
-        overview={content?.overview}
-        btns={btnsProps}
-        id={content.id}
-        mediaType={content.media_type}
-        isPlayWindow={changePlayer}
-      />
+      <div className="pt-8 md:pt-0">
+        <Hero
+          title={content?.title}
+          overview={content?.overview}
+          btns={btnsProps}
+          id={content.id}
+          mediaType={content.media_type}
+          isPlayWindow={changePlayer}
+        />
+      </div>
+      <div className="mt-20 md:mt-0">
+        <ContentSlider
+          sliderName={"Recommended Movies"}
+          contentResults={randomContentSlider(recommended?.upcoming)}
+        />
+      </div>
       {isVideoPlayer ? (
         <VideoPlayerWindow
           closePlayer={changePlayer}
@@ -64,10 +72,6 @@ const MovieTemplate = ({
           videoLink={youtubeUrl}
         />
       ) : null}
-      <ContentSlider
-        sliderName={"Recommended Movies"}
-        contentResults={randomContentSlider(recommended?.upcoming)}
-      />
     </>
   );
 };

@@ -25,7 +25,9 @@ const SerieTemplate = ({
   useEffect(() => {
     const findKey = () =>
       trailers
-        ?.filter((e: Trailer) => e.type === "Official Trailer" || e.type === "Trailer")
+        ?.filter(
+          (e: Trailer) => e.type === "Official Trailer" || e.type === "Trailer"
+        )
         .map((e: Trailer) => e.key);
     if (trailers?.length === 0) {
       return setVideoKey("rPleicjySdI");
@@ -40,7 +42,7 @@ const SerieTemplate = ({
     play: true,
     add: true,
   };
-  console.log(trailers)
+  console.log(trailers);
   return (
     <>
       <Header />
@@ -49,18 +51,22 @@ const SerieTemplate = ({
         quality={100}
         height={"h-[100vh]"}
       />
-      <Hero
-        title={content?.name}
-        overview={content?.overview}
-        btns={btnsProps}
-        id={content.id}
-        mediaType={content.media_type}
-        isPlayWindow={changePlayer}
-      />
-      <ContentSlider
-        sliderName={"Recommended Series"}
-        contentResults={randomContentSlider(recommended.topRated)}
-      />
+      <div className="pt-8 md:pt-0">
+        <Hero
+          title={content?.name}
+          overview={content?.overview}
+          btns={btnsProps}
+          id={content.id}
+          mediaType={content.media_type}
+          isPlayWindow={changePlayer}
+        />
+      </div>
+      <div className="mt-20 md:mt-0">
+        <ContentSlider
+          sliderName={"Recommended Series"}
+          contentResults={randomContentSlider(recommended.topRated)}
+        />
+      </div>
       {isVideoPlayer ? (
         <VideoPlayerWindow
           closePlayer={changePlayer}

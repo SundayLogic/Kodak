@@ -14,18 +14,23 @@ const SeriesTemplate = ({ props }: PageSeriesProps) => {
   return (
     <>
       <Header />
-      <Hero
-        backdrop={backdropSerie?.backdrop_path}
-        title={backdropSerie?.name}
-        overview={backdropSerie?.overview}
-        pageName={"Series"}
-        purpleBg={true}
-        purpleTitleBg
-        btns={btnProps}
-        id={backdropSerie?.id}
-        mediaType={"tv"}
-      />
-      <ContentSlider sliderName="Top Rated" contentResults={props.topRated} />
+
+      <div className="pt-8 md:pt-0">
+        <Hero
+          backdrop={backdropSerie?.backdrop_path}
+          title={backdropSerie?.name}
+          overview={backdropSerie?.overview}
+          pageName={"Series"}
+          purpleBg={true}
+          purpleTitleBg
+          btns={btnProps}
+          id={backdropSerie?.id}
+          mediaType={"tv"}
+        />
+      </div>
+      <div className="mt-20 md:mt-0">
+        <ContentSlider sliderName="Top Rated" contentResults={props.topRated} />
+      </div>
       <ContentSlider sliderName="Popular" contentResults={props.popular} />
       <ContentSlider sliderName="Airing Today" contentResults={props.airing} />
     </>
