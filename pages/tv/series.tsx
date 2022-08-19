@@ -4,12 +4,12 @@ import SeriesPage from "../../components/pages/SeriesPage";
 import { Serie} from "../../typings";
 import requests from "../../utils/requests/requests";
 
-interface MoviePageProps {
+interface SeriePageProps{
   popular: Serie[];
   topRated: Serie[];
   airing: Serie[];
 }
-const series = ({ popular, topRated, airing}: MoviePageProps) => {
+const series = ({ popular, topRated, airing}: SeriePageProps) => {
   const seriesProps = {
     popular: popular,
     topRated: topRated,

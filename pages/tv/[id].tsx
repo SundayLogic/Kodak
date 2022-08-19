@@ -37,7 +37,7 @@ export const getServerSideProps = async (context: any) => {
       fetch(serieUrl).then((res) => res.json()),
       fetch(serieTrailer).then((res) => res.json()),
       fetch(requests.fetchSeriesPopular).then((res) => res.json()),
-      fetch(requests.fetchMoviesTopRated).then((res) => res.json()),
+      fetch(requests.fetchSeriesTopRated).then((res) => res.json()),
       fetch(requests.fetchSeriesAiringToday).then((res) => res.json()),
     ]);
   return {
