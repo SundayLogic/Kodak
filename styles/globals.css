@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 @layer base{
+    html{
+        -webkit-tap-highlight-color: transparent;
+    }
     body{ 
         @apply bg-kodakPurple-10 text-kodakPurple-0.5 h-screen w-screen font-roboto !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-kodakPurple-1;
     }
