@@ -1,4 +1,4 @@
-type TextTypes = "TITLE" | "OVERVIEW" | "LINK" | "PAGE" | "SECTION" | "DESCRIPTION_LINK";
+type TextTypes = "TITLE" | "OVERVIEW" | "LINK" | "PAGE" | "SECTION" | "DESCRIPTION_LINK" | "SHAPE";
 interface TextAtomProps {
   text: string | undefined;
   type: TextTypes;
@@ -13,6 +13,9 @@ const TextAtom = ({text,type, purpleTitleBg}:TextAtomProps) => {
         break;
       case "OVERVIEW":
         finalCode = <p className="w-[80vw] md:w-[50vw] lg:w-[60vw] xl:w-[30vw] lg:text-paragraph text-shadow-sm">{text}</p>;
+        break;
+      case "SHAPE":
+        finalCode = <h1 className="text-shape text-kodakPurple-0.5/90 ">{text}</h1>;
         break;
       case "DESCRIPTION_LINK":
         finalCode = <p className="text-subtitle tracking-wider">{text}</p>;

@@ -1,23 +1,25 @@
-import {  PageTrendingProps } from "../../../typings";
+import { PageTrendingProps } from "../../../typings";
 import randomContentNumber from "../../../utils/functions/randomContentNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
-const TrendingPageTemplate= ({ props }: PageTrendingProps) => {
+const TrendingPageTemplate = ({ props }: PageTrendingProps) => {
   const btnProps = {
     info: true,
     play: false,
     add: true,
   };
-  let randomNumber = randomContentNumber(props.trending,7000)
-  const backdropMovie = props.trending?.[randomNumber]
-  console.log(props.popularMovies)
+  let randomNumber = randomContentNumber(props.trending, 7000);
+  const backdropMovie = props.trending?.[randomNumber];
+  console.log(props.popularMovies);
   return (
     <>
       <Header />
       <Hero
         backdrop={backdropMovie?.backdrop_path}
-        title={backdropMovie?.title}
+        title={
+          backdropMovie?.title ? backdropMovie?.title : backdropMovie?.name
+        }
         overview={backdropMovie?.overview}
         pageName={"Trending"}
         purpleBg={true}

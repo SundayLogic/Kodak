@@ -5,6 +5,7 @@ const links = {
     movies: "/movie/movies",
     series: "/tv/series",
     trending: "/trending",
+    watchlist: "/watchlist",
     account: "/account",
     dbImage: "https://image.tmdb.org/t/p/original",
     dbBase: "https://api.themoviedb.org/3",

@@ -41,7 +41,7 @@ const Header = () => {
               content={iconTextGenerator("Series", "SERIES")}
             />
             <LinkAtom
-              reference={links.urls.home}
+              reference={links.urls.watchlist}
               content={iconTextGenerator("Watchlist", "WATCHLIST")}
             />
           </div>
