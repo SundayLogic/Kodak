@@ -59,7 +59,7 @@ const SerieTemplate = ({
       />
       <ContentSlider
         sliderName={"Recommended Series"}
-        contentResults={randomContentSlider(recommended.airing)}
+        contentResults={randomContentSlider(recommended.topRated)}
       />
       {isVideoPlayer ? (
         <VideoPlayerWindow
