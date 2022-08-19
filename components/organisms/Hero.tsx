@@ -50,7 +50,6 @@ const Hero = ({
         title={title}
         overview={overview}
         purpleBg={purpleBg}
-        purpleTitleBg={purpleTitleBg}
         btns={btnsProps}
         id={id}
         mediaType={mediaType}
