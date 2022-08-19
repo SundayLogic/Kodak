@@ -25,9 +25,9 @@ const SeriesTemplate = ({ props }: PageSeriesProps) => {
         id={backdropMovie?.id}
         mediaType={"tv"}
       />
-      <ContentSlider sliderName="Airing Today" contentResults={props.airing} />
-      <ContentSlider sliderName="Popular" contentResults={props.popular} />
       <ContentSlider sliderName="Top Rated" contentResults={props.topRated} />
+      <ContentSlider sliderName="Popular" contentResults={props.popular} />
+      <ContentSlider sliderName="Airing Today" contentResults={props.airing} />
     </>
   );
 };
