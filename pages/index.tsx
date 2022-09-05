@@ -2,8 +2,8 @@ import Head from "next/head";
 import Footer from "../components/organisms/Footer";
 import HomePage from "../components/pages/HomePage";
 import { Movie, Serie } from "../typings";
-import randomContentNumber from "../utils/functions/randomContentNumber";
-import requests from "../utils/requests/requests";
+import randomContentNumber from "./utils/functions/randomContentNumber";
+import requests from "./utils/requests/requests";
 
 interface HomeProps {
   trending: (Serie | Movie)[];

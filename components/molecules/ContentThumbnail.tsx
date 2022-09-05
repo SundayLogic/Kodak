@@ -1,5 +1,5 @@
 import { ContentType } from "../../typings";
-import links from "../../utils/links";
+import links from "../../pages/utils/links";
 import ActionBtnAtom from "../atoms/Btns/ActionBtn";
 import LinkAtom from "../atoms/Btns/LinkAtom";
 import ImageAtom from "../atoms/images/ImageAtom";

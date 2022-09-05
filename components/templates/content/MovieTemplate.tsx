@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { IndividualContentProps, Trailer } from "../../../typings";
-import fetchTrailerKey from "../../../utils/functions/fetchTrailerKey";
-import randomContentSlider from "../../../utils/functions/RandomContent";
-import reloadPage from "../../../utils/functions/reloadPage";
-import links from "../../../utils/links";
+import fetchTrailerKey from "../../../pages/utils/functions/fetchTrailerKey";
+import randomContentSlider from "../../../pages/utils/functions/RandomContent";
+import reloadPage from "../../../pages/utils/functions/reloadPage";
+import links from "../../../pages/utils/links";
 import Backdrop from "../../atoms/images/Backdrop";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";

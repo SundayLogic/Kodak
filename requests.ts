@@ -1,4 +1,4 @@
-import links from "./utils/links";
+import links from "./pages/utils/links";
 
 const API_KEY = process.env.API_KEY;
 const BASE_URL = links.urls.dbBase;

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { Serie, Movie } from "../../../typings";
-import randomContentNumber from "../../../utils/functions/randomContentNumber";
+import randomContentNumber from "../../../pages/utils/functions/randomContentNumber";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";
 import Hero from "../../organisms/Hero";
