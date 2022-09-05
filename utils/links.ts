@@ -1,4 +1,4 @@
-const API_KEY = "4d071ab1be7403c2486ed2ab0fa244c2";
+const API_KEY =`${process.env.NEXT_PUBLIC_API_KEY}`;
 const links = {
     urls: {
     home: "/",
