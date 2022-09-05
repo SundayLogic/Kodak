@@ -12,7 +12,7 @@ const TextAtom = ({text,type, purpleTitleBg}:TextAtomProps) => {
         finalCode = <h1 className={`${purpleTitleBg ? "md:bg-kodakPurple-9/40" : null} text-4xl text-center font-bold tracking-wider md:text-5xl lg:text-h1 md:text-start lg:w-[55vw] text-shadow-lg lg:opacity-90 py-1.5`}>{text}</h1>;
         break;
       case "OVERVIEW":
-        finalCode = <p className="w-[80vw] md:w-[50vw] lg:w-[60vw] xl:w-[30vw] lg:text-paragraph text-shadow-sm">{text}</p>;
+        finalCode = <p className=" line-clamp-6 md:line-clamp-none w-[80vw] md:w-[50vw] lg:w-[60vw] xl:w-[30vw] lg:text-paragraph text-shadow-sm">{text}</p>;
         break;
       case "SHAPE":
         finalCode = <h1 className="text-shape text-kodakPurple-0.5/90 ">{text}</h1>;
