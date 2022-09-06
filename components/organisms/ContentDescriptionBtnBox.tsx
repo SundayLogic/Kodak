@@ -29,7 +29,7 @@ const ContentDescriptionBtnBox = ({
     <div className="flex space-x-4 md:justify-start">
       <span className={`${buttonShow(add)}`}>
         <LinkAtom
-          reference={moreInfoUrl}
+          reference={`${links.urls.home}`}
           content={buttonCreator("Watch Later", "ADD")}
         />
       </span>
