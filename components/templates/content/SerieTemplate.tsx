@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IndividualContentProps, Trailer } from "../../../typings";
-import randomContentSlider from "../../../pages/utils/functions/RandomContent";
-import links from "../../../pages/utils/links";
+import randomContentSlider from "../../../utils/functions/RandomContent";
+import links from "../../../utils/links";
 import Backdrop from "../../atoms/images/Backdrop";
 import ContentSlider from "../../organisms/ContentSlider";
 import Header from "../../organisms/Header";

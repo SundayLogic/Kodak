@@ -1,6 +1,6 @@
 import MoviesPage from "../../components/pages/MoviesPage";
 import { Movie} from "../../typings";
-import requests from "../utils/requests/requests";
+import requests from "../../utils/requests/requests";
 
 interface MoviePageProps {
   popular: Movie[];

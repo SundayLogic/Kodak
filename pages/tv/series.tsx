@@ -2,7 +2,7 @@ import Footer from "../../components/organisms/Footer";
 import MoviesPage from "../../components/pages/MoviesPage";
 import SeriesPage from "../../components/pages/SeriesPage";
 import { Serie} from "../../typings";
-import requests from "../utils/requests/requests";
+import requests from "../../utils/requests/requests";
 
 interface SeriePageProps{
   popular: Serie[];

@@ -1,6 +1,6 @@
 import LinkAtom from "../atoms/Btns/LinkAtom";
 import ContentDescriptionBtn from "../molecules/ContentDescriptionBtn";
-import links from "../../pages/utils/links";
+import links from "../../utils/links";
 import ActionBtnAtom from "../atoms/Btns/ActionBtn";
 type Icons = "INFO" | "ADD" | "PLAY";
 interface ContentDescriptionBtnBoxProps {

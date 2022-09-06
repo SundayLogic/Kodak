@@ -1,7 +1,7 @@
 import LinkAtom from "../atoms/Btns/LinkAtom";
 import ImageAtom from "../atoms/images/ImageAtom";
 import HeaderIcon from "../molecules/HeaderIcon";
-import links from "../../pages/utils/links";
+import links from "../../utils/links";
 type Icons = "HOME" | "MOVIES" | "SERIES" | "WATCHLIST" | "TRENDING";
 const Header = () => {
   const iconTextGenerator = (name: string, iconName: Icons) => (

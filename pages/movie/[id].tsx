@@ -1,7 +1,7 @@
 import IndividualContent from "../../components/pages/IndividualContent";
 import { IndividualContentProps, Trailer } from "../../typings";
-import links from "../utils/links";
-import requests from "../utils/requests/requests";
+import links from "../../utils/links";
+import requests from "../../utils/requests/requests";
 const movie = ({ content, trailers, recommended, contentId }: IndividualContentProps) => {
   const recommendedProp = {
     popular: recommended?.popular,

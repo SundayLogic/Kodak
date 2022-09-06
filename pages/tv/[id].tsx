@@ -1,9 +1,9 @@
 import Footer from "../../components/organisms/Footer";
 import IndividualContent from "../../components/pages/IndividualContent";
 import { IndividualContentProps } from "../../typings";
-import reloadPage from "../utils/functions/reloadPage";
-import links from "../utils/links";
-import requests from "../utils/requests/requests";
+import reloadPage from "../../utils/functions/reloadPage";
+import links from "../../utils/links";
+import requests from "../../utils/requests/requests";
 const serie = ({
   content,
   trailers,

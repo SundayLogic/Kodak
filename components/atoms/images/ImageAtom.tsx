@@ -1,5 +1,5 @@
 import Image from "next/image";
-import links from "../../../pages/utils/links";
+import links from "../../../utils/links";
 interface ImageAtomProps {
   src: string;
   alt: string;

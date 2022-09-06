@@ -1,6 +1,6 @@
 import TrendingPage from "../components/pages/TrendingPage";
 import {Movie, Serie} from "../typings";
-import requests from "./utils/requests/requests";
+import requests from "../utils/requests/requests";
 
 interface TrendingProps{
   trending: (Serie | Movie)[];
