@@ -11,9 +11,9 @@ interface ImageAtomProps {
 const ImageAtom = ({ src, alt, w, h, fill, quality }: ImageAtomProps) => {
   const fillChecker = () =>
     fill ? (
-      <Image src={src} alt={alt} layout="fill" quality={quality}/>
+      <Image src={src} alt={alt} layout="fill" quality={quality} priority/>
     ) : (
-      <Image src={src} alt={alt} width={w} height={h} quality={quality}/>
+      <Image src={src} alt={alt} width={w} height={h} quality={quality} priority />
     );
   return fillChecker() ;
 };
