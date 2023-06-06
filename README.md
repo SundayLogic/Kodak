@@ -3,10 +3,10 @@
 ## Description
 Kodak is a TypeScript-based project focusing on building an application using Next.js, React, and other modern web technologies. The project has a structured approach based on atomic design principles with different components divided into atoms, molecules, organisms, pages, and templates.
 
-![StreetComplete](http://www.westnordost.de/streetcomplete/featureGraphic.png)
-
 ## Screenshots
-<img src="metadata/en/images/phoneScreenshots/screenshot1.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot2.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot3.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot4.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot5.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot6.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot7.png" width="240"/> <img src="metadata/en/images/phoneScreenshots/screenshot8.png" width="240"/>
+![Kodak-homescreen](https://i.imgur.com/Xcd5Syd.jpg)
+
+![Kodak-videoPlayer](https://i.imgur.com/pBoF2sl.png)
 
 ## Technologies Used
 
@@ -63,10 +63,10 @@ For more detailed usage and code examples, please refer to the individual compon
 
 There are quite a few different quest types now and more will be added over time.
 
-* 🐛 [Test and report issues](CONTRIBUTING.md#testing-and-reporting-issues)
+* 🐛 [Adding Test Files](CONTRIBUTING.md#testing-and-reporting-issues)
 * 📃 [Translate the app into your language](CONTRIBUTING.md#translating-the-app)
-* 🕵️ [Solve notes left by StreetComplete users](CONTRIBUTING.md#solving-notes)
-* 💡 [Suggest new quests](CONTRIBUTING.md#suggesting-new-quests), or, even better, [implement them](CONTRIBUTING.md#developing-new-quests).
+* 🕵️ [Adding Sign In function](CONTRIBUTING.md#solving-notes)
+* 💡 [Streaming content](CONTRIBUTING.md#suggesting-new-quests), or, even better, [implement them](CONTRIBUTING.md#developing-new-quests).
 * ➕ [and more…](CONTRIBUTING.md)
 
 Also, if you like StreetComplete, **spread the word**! ❤️
