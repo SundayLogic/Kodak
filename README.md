@@ -67,12 +67,6 @@ There are quite a few different quest types now and more will be added over time
 * 📃 [Translate the app into your language](CONTRIBUTING.md#translating-the-app)
 * 🕵️ [Adding Sign In function](CONTRIBUTING.md#solving-notes)
 * 💡 [Streaming content](CONTRIBUTING.md#suggesting-new-quests), or, even better, [implement them](CONTRIBUTING.md#developing-new-quests).
-* ➕ [and more…](CONTRIBUTING.md)
-
-Also, if you like StreetComplete, **spread the word**! ❤️
-
-## Credits/Inspiration/Alternatives
-This project is inspired by modern web development practices and aims to implement them using TypeScript and Next.js.
 
 ## License
 
